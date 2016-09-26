@@ -1,0 +1,48 @@
+# osx noise
+.DS_Store
+.DS_Store?
+.AppleDouble
+.LSOverride
+ehthumbs.db
+Thumbs.db
+.Spotlight-V100
+.Trashes
+
+# xcode noise
+build/*
+*.mode1
+*.mode1v3
+*.mode2v3
+*.perspective
+*.perspectivev3
+*.pbxuser
+*.xcworkspace
+xcuserdata
+
+# sass
+*.scssc
+*.css.map
+*.sass-cache/
+
+# general
+*.log
+
+# sitemap & seo
+sitemap.xml
+sitemap.xml.gz
+GeoIP.dat
+GeoIPv6.dat
+
+# node_modules & Bower
+*node_modules/
+*/node_modules/
+*/bower_components/
+
+# IDEs
+*.idea/
+
+# Craft specific
+*/craft/config/db.php
+*/craft/storage/runtime/*
+*/craft/storage/backups/*
+*/craft/storage/userphotos/*
