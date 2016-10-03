@@ -19,6 +19,47 @@
 	<article>
 		<h1>{{ entry.title }}</h1>
 		<p>Posted on {{ entry.postDate.format('F d, Y') }}</p>
+
+        <p>Event Start: {{ entry.eventStart.format('F d, Y H:i:s') }}</p>
+
+        {% if entry.eventEnd %}
+            <p>Event End: {{ entry.eventEnd.format('F d, Y H:i:s') }}</p>
+            {% set difference = date( entry.eventStart ).diff(date(entry.eventEnd)) %}
+            <p>Duration:
+                {% if difference.days %}{{ difference.days }} days, {% endif %}
+                {% if difference.h %}{{ difference.h }} hours{% endif %}
+            </p>
+        {% endif %}
+
+        {% set difference = date( now | date() ).diff(date(entry.eventStart)) %}
+        <p>Time until start:
+            {% if difference.days %}{{ difference.days }} days, {% endif %}
+            {% if difference.h %}{{ difference.h }} hours{% endif %}
+        </p>
+
+        {% if entry.addressLocation %}
+            <p>Address:<br>{{ entry.addressLocation }}</p>
+        {% endif %}
+
 		{{ entry.body }}
+
+        {% if entry.importantNotices %}
+            <p><strong>{{ entry.importantNotices }}</strong></p>
+        {% endif %}
+
+        {% if entry.sponsors | length %}
+            {% for sponsor in entry.sponsors %}
+                {% if sponsor.sponsorUrl %}
+                    <a href="{{ sponsor.sponsorUrl }}" title="{{ sponsor.sponsorName }}" target="_blank">
+                {% endif %}
+                {% set logo = sponsor.sponsorLogo.first() %}
+                {% if logo %}
+                    <img src="{{ logo.getUrl('eventSponsor') }}" alt="Logo of {{ sponsor.sponsorName }}" title="{{ logo.title }}" />
+                {% endif %}
+                {% if sponsor.sponsorUrl %}
+                    </a>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
 	</article>
 {% endblock %}

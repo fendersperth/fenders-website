@@ -1,8 +1,8 @@
 {#
- # News index template
+ # Events index template
  # -------------------
  #
- # This template is loaded whenever http://example.com/news is
+ # This template is loaded whenever http://example.com/events is
  # requested, because it is located at news/index.html in your
  # craft/templates/ folder.
  #
@@ -11,12 +11,12 @@
  #}
 
 {% extends "_layout" %}
-{% set title = "News" %}
+{% set title = "Events" %}
 
 {% block content %}
 	<h1>Events</h1>
 
-	{% for entry in craft.entries.section('news').find() %}
+	{% for entry in craft.entries.section('events').find() %}
 		<article>
 			<h3><a href="{{ entry.url }}">{{ entry.title }}</a></h3>
 			<p>Posted on {{ entry.postDate.format('F d, Y') }}</p>
