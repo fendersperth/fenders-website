@@ -13,7 +13,7 @@
 
 // Type
 @import 'fonts/type';
-//@import 'fonts/icons';
+@import 'fonts/icons';
 
 // Components
 @import '_components/alerts';
@@ -25,4 +25,5 @@
 @import '_sections/footer';
 @import '_sections/layout';
 @import '_sections/cms-content';
+@import '_sections/home';
 @import '_sections/event';

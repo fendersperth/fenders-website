@@ -708,6 +708,63 @@ a:focus {
 	color: #4d4d4d;
 }
 
+@font-face {
+	font-family: "Icons";
+	src: url("fonts/Icons.eot");
+	src: url("fonts/Icons.eot?#iefix") format("eot"), url("fonts/Icons.woff") format("woff"), url("fonts/Icons.ttf") format("truetype"), url("fonts/Icons.svg#Icons") format("svg");
+}
+
+.icon:before {
+	font-family: "Icons";
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: normal; /* speak: none; only necessary if not using the private unicode range (firstGlyph option) */
+	text-decoration: none;
+	text-transform: none;
+}
+
+.icon-icn_01downarrow:before {
+	content: "\E001";
+}
+
+.icon-icn_02circle:before {
+	content: "\E002";
+}
+
+.icon-icn_03square:before {
+	content: "\E003";
+}
+
+.icon-icn_04triangle:before {
+	content: "\E004";
+}
+
+.icon-icn_05pentagon:before {
+	content: "\E005";
+}
+
+.icon-icn_06mapmarker:before {
+	content: "\E006";
+}
+
+.icon-icn_07timer:before {
+	content: "\E007";
+}
+
+.icon-icn_08clock:before {
+	content: "\E008";
+}
+
+.icon-icn_09calendar:before {
+	content: "\E009";
+}
+
+.icon-logo:before {
+	content: "\E00A";
+}
+
 .alert {
 	font-size: 14px;
 	font-size: 1.4rem;
@@ -746,6 +803,9 @@ button {
 	display: inline-block;
 	padding: 10px 15px;
 	text-align: center;
+	font-weight: 700;
+	font-size: 13px;
+	font-size: 1.3rem;
 }
 
 input,
@@ -990,6 +1050,72 @@ form input.error {
 	transition: border-color 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
 }
 
+header {
+	padding: 24px 35px;
+}
+
+header h1 {
+	margin: 0;
+	float: left;
+}
+
+header .logo {
+	display: block;
+	width: calc(200px * 0.75);
+	height: calc(58px * 0.75);
+	background: url("../img/logo.svg");
+}
+
+header .logo span {
+	position: absolute;
+	width: 1px;
+	margin: -1px;
+	padding: 0;
+	overflow: hidden;
+	height: 1px;
+	border: 0;
+	clip: rect(0 0 0 0);
+}
+
+header nav {
+	float: right;
+}
+
+header ul li {
+	display: inline;
+}
+
+header .btn {
+	margin: 0 10px;
+}
+
+footer {
+	margin-top: 70px;
+	border-top: 1px solid #7f65ae;
+	padding: 25px 0;
+}
+
+footer .container {
+	max-width: 1160px;
+}
+
+footer .logo {
+	float: left;
+}
+
+footer nav {
+	float: left;
+}
+
+footer nav.social {
+	float: right;
+}
+
+footer ul li {
+	display: inline;
+	margin: 0 10px;
+}
+
 *,
 *:before,
 *:after {
@@ -1107,56 +1233,99 @@ body {
 	height: 100%;
 }
 
-header {
-	padding: 24px 35px;
+.home header h1 {
+	position: relative;
+	margin-top: 55px;
+	left: 50%;
+	-ms-transform: translateX(-50%);
+	transform: translateX(-50%);
+	display: block;
 }
 
-header h1 {
-	margin: 0;
-	float: left;
+.home header .logo {
+	width: calc(200px);
+	height: calc(58px);
 }
 
-header nav {
+.home .hero {
+	position: relative;
+	height: 550px;
+}
+
+.home .hero h2 {
+	font-weight: 700;
+	font-size: 55px;
+	font-size: 5.5rem;
+	position: relative;
+	top: 50%;
+	-ms-transform: translateY(-50%);
+	transform: translateY(-50%);
+	display: block;
+	color: #fff;
+	text-align: center;
+	max-width: 80%;
+	margin: 0 auto;
+}
+
+.home .hero h2 span {
+	display: inline-block;
+	border-radius: 5px;
+	border: 3px solid #e1e1e9;
+	background: #f7f7f9;
+	color: #fd597c;
+	padding: 0 10px;
+}
+
+.home .hero h3 {
+	position: absolute;
+	margin: 0 auto;
+	left: auto;
+	right: auto;
+	bottom: 0;
+	color: #fff;
+	text-align: center;
+}
+
+.home .join {
+	padding: 60px 70px;
+	margin: 130px auto 0;
+	border-radius: 5px;
+	max-width: 700px;
+	background: #fff;
+}
+
+.home .join label {
+	display: block;
+	margin-bottom: 8px;
+	position: relative;
+}
+
+.home .join .hidden {
+	text-indent: -9999em;
+	display: block;
+	font-size: 0;
+	position: absolute;
+	left: -9999px;
+	opacity: 0;
+}
+
+.home .join input {
+	position: relative;
+	background: #fff;
+	border-bottom: 1px solid #eeeeee;
+	line-height: 1.4;
+	width: 100%;
+	display: block;
+	color: #757575;
+	transition: border-color 0.2s ease-in-out, color 0.2s ease-in-out;
+	padding: 17px;
+}
+
+.home .join .btn {
 	float: right;
-}
-
-header ul li {
-	display: inline;
-}
-
-header .btn {
-	margin: 0 10px;
-}
-
-footer {
-	margin-top: 70px;
-	border-top: 1px solid #7f65ae;
-	padding: 25px 0;
-}
-
-footer .container {
-	max-width: 1160px;
-}
-
-footer .logo {
-	float: left;
-}
-
-footer nav {
-	float: left;
-}
-
-footer nav.social {
-	float: right;
-}
-
-footer ul li {
-	display: inline;
-	margin: 0 10px;
 }
 
 .event-list {
-	height: 190px;
 	margin-top: 90px;
 }
 
@@ -1164,44 +1333,118 @@ footer ul li {
 	position: relative;
 	float: left;
 	width: 200px;
-	height: 100%;
+	height: 190px;
 	padding: 15px 15px 30px;
 	border-radius: 5px;
-	margin: 0 20px 0 0;
-	border: 1px solid #afa0ca;
+	margin: 0 20px 20px 0;
+	border: 1px solid #866fae;
+	transition: background 0.4s ease-in-out;
+}
+
+.event-list article:hover,
+.event-list article:focus,
+.event-list article.past {
+	border: 1px solid #6c5496;
+	background: #6c5496;
 }
 
 .event-list article.active {
+	border: 1px solid #fff;
 	background: #fff;
+}
+
+.event-list article.active a {
+	color: #000;
+}
+
+.event-list article a {
+	color: #fff;
+	display: block;
+	width: 100%;
+	height: 100%;
 }
 
 .event-list article .month {
 	position: absolute;
 	top: -30px;
+	lefT: 0;
 	color: #fff;
+	font-weight: 700;
+	font-size: 12px;
+	font-size: 1.2rem;
 }
 
 .event-list article .tag {
+	position: relative;
 	display: block;
+	padding-left: 20px;
+	font-weight: 700;
+	font-size: 12px;
+	font-size: 1.2rem;
+}
+
+.event-list article .tag.icon:before {
+	position: absolute;
+	left: 0px;
+	top: 2px;
+	font-size: 12px;
+	font-size: 1.2rem;
+	color: #fe5a7d;
+}
+
+.event-list article .tag.talk:before {
+	color: #fc5b7d;
+	content: "\E005";
+}
+
+.event-list article .tag.workshop:before {
+	color: #01d08a;
+	content: "\E002";
+}
+
+.event-list article .tag.social:before {
+	color: #ffcb20;
+	content: "\E004";
+}
+
+.event-list article .tag.hack:before {
+	color: #4990e2;
+	content: "\E003";
+}
+
+.event-list article strong {
+	display: block;
+	margin-top: 20px;
 }
 
 .event-list article .date {
 	position: absolute;
 	display: block;
 	bottom: 10px;
+	opacity: 0.7;
+	font-size: 12px;
+	font-size: 1.2rem;
 }
 
 .event .strapline {
 	position: relative;
-	min-height: 300px;
+	height: 300px;
 	padding-right: 390px;
 }
 
 .event .strapline h2 {
+	position: relative;
+	top: 50%;
+	-ms-transform: translateY(-50%);
+	transform: translateY(-50%);
+	display: block;
 	color: #fff;
 	text-align: center;
 	max-width: 80%;
 	margin: 0 auto;
+	font-weight: 700;
+	font-size: 40px;
+	font-size: 4rem;
 }
 
 .event .strapline .breakout {
@@ -1276,7 +1519,7 @@ footer ul li {
 .event .content {
 	max-width: 1160px;
 	min-height: 500px;
-	margin: 135px auto 0;
+	margin: 115px auto 0;
 }
 
 .event .content .col-wrapper {
@@ -1313,6 +1556,41 @@ footer ul li {
 	float: right;
 	width: 390px;
 	padding: 100px 40px 75px 40px;
+}
+
+.event .content h3 {
+	font-weight: 700;
+	font-size: 26px;
+	font-size: 2.6rem;
+	margin: 0 0 20px;
+}
+
+.schedule {
+	list-style: none;
+	margin: 0;
+	padding: 0 0 50px;
+}
+
+.schedule li {
+	padding: 13px 0;
+	border-bottom: 1px solid #e6e6e6;
+}
+
+.schedule li:last-child {
+	border-bottom: none;
+}
+
+.schedule .time {
+	color: #4d4d4d;
+	display: inline-block;
+	width: 100px;
+	font-weight: 700;
+}
+
+.notice {
+	padding: 25px 20px;
+	background: #fafafa;
+	border: 1px solid #e6e6e6;
 }
 
 .event .sidebar .calendar {
@@ -1354,14 +1632,47 @@ footer ul li {
 }
 
 .event .sidebar .meta {
+	position: relative;
 	display: block;
 	padding-left: 40px;
+	margin-bottom: 15px;
+}
+
+.event .sidebar .meta.icon:before {
+	position: absolute;
+	left: 0px;
+	top: 4px;
+	font-size: 16px;
+	font-size: 1.6rem;
+	color: #fe5a7d;
+}
+
+.event .sidebar .meta.date:before {
+	content: "\E009";
+}
+
+.event .sidebar .meta.start:before {
+	content: "\E008";
+}
+
+.event .sidebar .meta.duration:before {
+	left: 2px;
+	content: "\E007";
+}
+
+.event .sidebar .meta.pin:before {
+	left: 3px;
+	content: "\E006";
 }
 
 .event .sidebar .meta-box {
 	border-top: 2px solid #f0f0f0;
 	margin-top: 50px;
 	padding-top: 30px;
+}
+
+.event .sidebar .location .map {
+	margin-bottom: 20px;
 }
 
 @media only screen and (max-width: 480px) {

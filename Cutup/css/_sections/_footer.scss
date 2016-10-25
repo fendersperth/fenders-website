@@ -1,2 +1,32 @@
 //  Footer
 // --------------------------------------------------
+
+footer {
+    margin-top: 70px;
+    border-top: 1px solid #7f65ae;
+    padding: 25px 0;
+
+    .container {
+        max-width: 1160px;
+    }
+
+    .logo {
+        float: left;
+    }
+
+    nav {
+        float: left;
+
+        &.social {
+            float: right;
+        }
+    }
+
+    ul {
+
+        li {
+            display: inline;
+            margin: 0 10px;
+        }
+    }
+}

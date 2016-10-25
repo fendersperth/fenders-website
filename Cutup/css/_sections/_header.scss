@@ -1,5 +1,43 @@
 // Header
 
-header.main {
-	
+header {
+    padding: 24px 35px;
+
+    h1 {
+        margin: 0;
+        float: left;
+    }
+
+    .logo {
+        display: block;
+        width: calc(200px * 0.75);
+        height: calc(58px * 0.75);
+        background: url('../img/logo.svg');
+
+        span {
+            position: absolute;
+            width: 1px;
+            margin: -1px;
+            padding: 0;
+            overflow: hidden;
+            height: 1px;
+            border: 0;
+            clip: rect(0 0 0 0);
+        }
+    }
+
+    nav {
+        float: right;
+    }
+
+    ul {
+
+        li {
+            display: inline;
+        }
+    }
+
+    .btn {
+        margin: 0 10px;
+    }
 }
