@@ -82,6 +82,7 @@
 
     input {
         @include font-size(18);
+        border-radius: 0;
         position: relative;
         background: #fff;
         border-bottom: 1px solid #eeeeee;
@@ -92,6 +93,7 @@
         transition: border-color 0.2s ease-in-out, color 0.2s ease-in-out;
         padding: 10px 0;
         margin-bottom: 40px;
+       &.error { border-bottom-color: $error; color: $error; }
     }
 
     .btn {
