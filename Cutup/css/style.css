@@ -1287,11 +1287,22 @@ body {
 }
 
 .home .join {
-	padding: 60px 70px;
+	padding: 60px 70px 45px;
 	margin: 130px auto 0;
 	border-radius: 5px;
 	max-width: 700px;
 	background: #fff;
+}
+
+.home .join legend {
+	font-size: 26px;
+	font-size: 2.6rem;
+	text-align: center;
+	margin-bottom: 40px;
+}
+
+.home .join legend span {
+	color: #fc5b7d;
 }
 
 .home .join label {
@@ -1310,19 +1321,25 @@ body {
 }
 
 .home .join input {
+	font-size: 18px;
+	font-size: 1.8rem;
 	position: relative;
 	background: #fff;
 	border-bottom: 1px solid #eeeeee;
 	line-height: 1.4;
 	width: 100%;
 	display: block;
-	color: #757575;
+	color: #454545;
 	transition: border-color 0.2s ease-in-out, color 0.2s ease-in-out;
-	padding: 17px;
+	padding: 10px 0;
+	margin-bottom: 40px;
 }
 
 .home .join .btn {
 	float: right;
+	padding: 15px 35px;
+	font-size: 16px;
+	font-size: 1.6rem;
 }
 
 .event-list {
@@ -1453,7 +1470,7 @@ body {
 	right: 20px;
 	width: 350px;
 	height: 390px;
-	padding: 23px 20px;
+	padding: 50px 20px 23px;
 	background: #fff;
 	border-radius: 5px;
 	box-shadow: 0px 10px 30px 0px rgba(0, 0, 0, 0.1);
@@ -1462,14 +1479,21 @@ body {
 .event .strapline .breakout .date {
 	display: block;
 	text-align: center;
+	font-weight: 700;
+	font-size: 26px;
+	font-size: 2.6rem;
+	line-height: 1;
 }
 
 .event .strapline .breakout .day {
 	display: block;
 	text-align: center;
+	font-size: 14px;
+	font-size: 1.4rem;
 }
 
 .event .strapline .breakout .info {
+	margin-top: 45px;
 	border-radius: 5px;
 	background: #f4f4f4;
 	padding: 12px 0;
@@ -1479,6 +1503,9 @@ body {
 	width: 49%;
 	display: inline-block;
 	text-align: center;
+	font-weight: 700;
+	font-size: 22px;
+	font-size: 2.2rem;
 }
 
 .event .strapline .breakout .info .value:first-child {
@@ -1487,6 +1514,9 @@ body {
 
 .event .strapline .breakout .info .label {
 	display: block;
+	font-weight: 400;
+	font-size: 14px;
+	font-size: 1.4rem;
 }
 
 .event .strapline .breakout .attendance {
@@ -1507,19 +1537,34 @@ body {
 	margin: 0 0 0 0;
 }
 
+.event .strapline .breakout .attendance .attendees {
+	display: inline-block;
+	padding: 0 0 0 20px;
+	font-size: 14px;
+	font-size: 1.4rem;
+	font-weight: 700;
+}
+
 .event .strapline .breakout .attendance .attendees a {
 	display: block;
+	color: #fe5a7d;
 }
 
 .event .strapline .breakout .purchase {
 	width: 100%;
+	padding-top: 15px;
+	padding-bottom: 15px;
 	font-weight: 700;
+	font-size: 16px;
+	font-size: 1.6rem;
 }
 
 .event .content {
 	max-width: 1160px;
 	min-height: 500px;
 	margin: 115px auto 0;
+	font-size: 14px;
+	font-size: 1.4rem;
 }
 
 .event .content .col-wrapper {
@@ -1555,7 +1600,7 @@ body {
 .event .content .col:nth-child(1) {
 	float: right;
 	width: 390px;
-	padding: 100px 40px 75px 40px;
+	padding: 120px 40px 75px 40px;
 }
 
 .event .content h3 {
@@ -1601,30 +1646,53 @@ body {
 
 .event .sidebar .calendar li {
 	float: left;
-	width: calc(100% / 7);
+	width: calc(70% / 6);
 	text-align: center;
+	margin-right: calc(10% / 6);
+}
+
+.event .sidebar .calendar li .day {
+	font-size: 12px;
+	font-size: 1.2rem;
 }
 
 .event .sidebar .calendar li .date {
 	display: block;
-	margin: 0 5px 0 0;
 	border-radius: 5px;
 	border: 1px solid #e6e6e6;
 	background: #fff;
+	padding: 8px 0;
+	font-size: 14px;
+	font-size: 1.4rem;
 }
 
 .event .sidebar .calendar li .month {
 	display: none;
 }
 
+.event .sidebar .calendar li.active {
+	width: 20%;
+}
+
 .event .sidebar .calendar li.active .date {
 	color: #fff;
 	border: 1px solid #fe5a7d;
 	background: #fe5a7d;
+	font-weight: 700;
+	font-size: 25px;
+	font-size: 2.5rem;
+	line-height: 1.1;
 }
 
 .event .sidebar .calendar li.active .month {
 	display: block;
+	font-weight: 400;
+	font-size: 12px;
+	font-size: 1.2rem;
+}
+
+.event .sidebar .calendar li:last-child {
+	margin-right: 0;
 }
 
 .event .sidebar .date-time {
@@ -1636,12 +1704,14 @@ body {
 	display: block;
 	padding-left: 40px;
 	margin-bottom: 15px;
+	font-size: 14px;
+	font-size: 1.4rem;
 }
 
 .event .sidebar .meta.icon:before {
 	position: absolute;
 	left: 0px;
-	top: 4px;
+	top: 3px;
 	font-size: 16px;
 	font-size: 1.6rem;
 	color: #fe5a7d;
@@ -1669,6 +1739,13 @@ body {
 	border-top: 2px solid #f0f0f0;
 	margin-top: 50px;
 	padding-top: 30px;
+}
+
+.event .sidebar .meta-box h4 {
+	font-weight: 700;
+	font-size: 18px;
+	font-size: 1.8rem;
+	margin: 0 0 20px;
 }
 
 .event .sidebar .location .map {

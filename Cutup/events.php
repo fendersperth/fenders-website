@@ -27,10 +27,10 @@
                         <div class="attendance">
 
                             <div class="avatars">
-                                <span><img src="/img/temp/avatar.png" alt="" title=""/></span>
-                                <span><img src="/img/temp/avatar.png" alt="" title=""/></span>
-                                <span><img src="/img/temp/avatar.png" alt="" title=""/></span>
-                                <span><img src="/img/temp/avatar.png" alt="" title=""/></span>
+                                <span><img src="/img/temp/avatar-cat.png" alt="" title=""/></span>
+                                <span><img src="/img/temp/avatar-corey.png" alt="" title=""/></span>
+                                <span><img src="/img/temp/avatar-tom.png" alt="" title=""/></span>
+                                <span><img src="/img/temp/avatar-lee.png" alt="" title=""/></span>
                             </div>
 
                             <span class="attendees">

@@ -4,8 +4,20 @@
 $fontStack: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 $margin: 0 0 20px;
 
-@mixin bold() {
-	font-weight: 700;
+@mixin light {
+    font-weight: 300;
+}
+
+@mixin reg {
+    font-weight: 400;
+}
+
+@mixin bold {
+    font-weight: 700;
+}
+
+@mixin xbold {
+    font-weight: 800;
 }
 
 

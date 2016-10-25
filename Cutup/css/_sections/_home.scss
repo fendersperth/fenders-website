@@ -49,11 +49,21 @@
 }
 
 .home .join {
-    padding: 60px 70px;
+    padding: 60px 70px 45px;
     margin: 130px auto 0;
     border-radius: 5px;
     max-width: 700px;
     background: #fff;
+
+    legend {
+        @include font-size(26);
+        text-align: center;
+        margin-bottom: 40px;
+
+        span {
+            color: #fc5b7d;
+        }
+    }
 
     label {
         display: block;
@@ -71,18 +81,22 @@
     }
 
     input {
+        @include font-size(18);
         position: relative;
         background: #fff;
         border-bottom: 1px solid #eeeeee;
         line-height: 1.4;
         width: 100%;
         display: block;
-        color: #757575;
+        color: #454545;
         transition: border-color 0.2s ease-in-out, color 0.2s ease-in-out;
-        padding: 17px;
+        padding: 10px 0;
+        margin-bottom: 40px;
     }
 
     .btn {
         float: right;
+        padding: 15px 35px;
+        @include font-size(16);
     }
 }

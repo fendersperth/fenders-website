@@ -112,7 +112,7 @@
         right: 20px;
         width: 350px;
         height: 390px;
-        padding: 23px 20px;
+        padding: 50px 20px 23px;
         background: #fff;
         border-radius: 5px;
         box-shadow: 0px 10px 30px 0px rgba(0,0,0,0.1);
@@ -120,14 +120,19 @@
         .date {
             display: block;
             text-align: center;
+            @include bold();
+            @include font-size(26);
+            line-height: 1;
         }
 
         .day {
             display: block;
             text-align: center;
+            @include font-size(14);
         }
 
         .info {
+            margin-top: 45px;
             border-radius: 5px;
             background: #f4f4f4;
             padding: 12px 0;
@@ -136,6 +141,8 @@
                 width: 49%;
                 display: inline-block;
                 text-align: center;
+                @include bold();
+                @include font-size(22);
 
                 &:first-child {
                     border-right: 1px solid #d7d7d7;
@@ -144,6 +151,8 @@
 
             .label {
                 display: block;
+                @include reg();
+                @include font-size(14);
             }
         }
 
@@ -172,9 +181,14 @@
             }
 
             .attendees {
+                display: inline-block;
+                padding: 0 0 0 20px;
+                @include font-size(14);
+                @include bold();
 
                 a {
                     display: block;
+                    color: #fe5a7d;
                 }
             }
 
@@ -182,7 +196,10 @@
 
         .purchase {
             width: 100%;
+            padding-top: 15px;
+            padding-bottom: 15px;
             @include bold();
+            @include font-size(16);
         }
     }
 }
@@ -191,6 +208,7 @@
     max-width: 1160px;
     min-height: 500px;
     margin: 115px auto 0;
+    @include font-size(14);
 
     .col-wrapper {
         @include clearfix();
@@ -211,7 +229,7 @@
         &:nth-child(1) {
             float: right;
             width: 390px;
-            padding: 100px 40px 75px 40px;
+            padding: 120px 40px 75px 40px;
         }
     }
 
@@ -259,19 +277,21 @@
 
         li {
             float: left;
-            width: calc(100% / 7);
+            width: calc(70% / 6);
             text-align: center;
+            margin-right: calc(10% / 6);
 
             .day {
-
+                @include font-size(12);
             }
 
             .date {
                 display: block;
-                margin: 0 5px 0 0;
                 border-radius: 5px;
                 border: 1px solid #e6e6e6;
                 background: #fff;
+                padding: 8px 0;
+                @include font-size(14);
             }
 
             .month {
@@ -279,16 +299,26 @@
             }
 
             &.active {
+                width: 20%;
 
                 .date {
                     color: #fff;
                     border: 1px solid #fe5a7d;
                     background: #fe5a7d;
+                    @include bold();
+                    @include font-size(25);
+                    line-height: 1.1;
                 }
 
                 .month {
                     display: block;
+                    @include reg();
+                    @include font-size(12);
                 }
+            }
+
+            &:last-child {
+                margin-right: 0;
             }
         }
     }
@@ -302,6 +332,7 @@
         display: block;
         padding-left: 40px;
         margin-bottom: 15px;
+        @include font-size(14);
 
         strong {
 
@@ -310,7 +341,7 @@
         &.icon:before {
             position: absolute;
             left: 0px;
-            top: 4px;
+            top: 3px;
             @include font-size(16);
             color: #fe5a7d;
         }
@@ -336,7 +367,9 @@
         padding-top: 30px;
 
         h4 {
-
+            @include bold();
+            @include font-size(18);
+            margin: 0 0 20px;
         }
     }
 

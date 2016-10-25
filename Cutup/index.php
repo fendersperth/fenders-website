@@ -20,8 +20,8 @@
                 <legend>Join the convo with <span>312</span> other Fenders on Slack!</legend>
 
                 <label>
-                    <span class="hidden">Name</span>
-                    <input type="text" name="name" placeholder="Name" class="required" aria-required="true">
+                    <span class="hidden">Your Name</span>
+                    <input type="text" name="name" placeholder="Your Name" class="required" aria-required="true">
                 </label>
 
                 <label>
