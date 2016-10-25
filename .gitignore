@@ -46,3 +46,7 @@ GeoIPv6.dat
 */craft/storage/runtime/*
 */craft/storage/backups/*
 */craft/storage/userphotos/*
+
+# Editor
+*.sublime-project
+*.sublime-workspace
