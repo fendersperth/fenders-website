@@ -1,14 +1,20 @@
 .event-list {
     margin-top: 90px;
 
+    .wrapper {
+        @include clearfix();
+        text-align: center;
+    }
+
     article {
+        text-align: left;
         position: relative;
-        float: left;
+        display: inline-block;
         width: 200px;
         height: 190px;
         padding: 15px 15px 30px;
         border-radius: 5px;
-        margin: 0 20px 20px 0;
+        margin: 0 10px 50px 10px;
         border: 1px solid lighten(#604b86, 15%);
         transition: background $timing $ease-std;
 
@@ -77,6 +83,7 @@
         }
 
         strong {
+            position: absolute;
             display: block;
             margin-top: 20px;
         }
@@ -87,6 +94,23 @@
             bottom: 10px;
             opacity: 0.7;
             @include font-size(12);
+        }
+    }
+
+    @include breakpoint(0, 444px) {
+
+        article {
+            width: 80%;
+            height: 160px;
+            margin-bottom: 20px;
+
+            &.past {
+                display: none;
+            }
+        }
+
+        .month {
+            display: none;
         }
     }
 }

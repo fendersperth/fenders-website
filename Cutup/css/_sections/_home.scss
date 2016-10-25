@@ -1,22 +1,25 @@
 .home header {
 
-    h1 {
-        position: relative;
-        margin-top: 55px;
-        left: 50%;
-        transform: translateX(-50%);
-        display: block;
-    }
+    @include breakpoint(742px) {
 
-    .logo {
-        width: calc(200px);
-        height: calc(58px);
+        h1 {
+            position: relative;
+            margin-top: 55px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: block;
+        }
+
+        .logo {
+            width: calc(200px);
+            height: calc(58px);
+        }
     }
 }
 
 .home .hero {
     position: relative;
-    height: 550px;
+    height: 50vh;
 
     h2 {
         @include bold();
@@ -24,7 +27,7 @@
         @include vertical-align();
         color: #fff;
         text-align: center;
-        max-width: 80%;
+        max-width: 60%;
         margin: 0 auto;
 
         span {
@@ -37,20 +40,53 @@
         }
     }
 
+    @include breakpoint(0, 1080px) {
+        height: 30vh;
+
+        h2 {
+            @include font-size(40);
+        }
+    }
+
+    @include breakpoint(0, 740px) {
+        height: 20vh;
+
+        h2 {
+            @include font-size(22);
+        }
+    }
+}
+
+.home .cta {
+
     h3 {
-        position: absolute;
-        margin: 0 auto;
-        left: auto;
-        right: auto;
-        bottom: 0;
-        color: #fff;
+        position: relative;
         text-align: center;
+        color: #fff;
+        @include font-size(26);
+
+        &:after {
+            @include font-size(12);
+            @include icons();
+            content: "\E001";
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: -30px;
+        }
+    }
+
+    @include breakpoint(0, 740px) {
+
+        h3 {
+            @include font-size(18);
+        }
     }
 }
 
 .home .join {
     padding: 60px 70px 45px;
-    margin: 130px auto 0;
+    margin: 100px auto 0;
     border-radius: 5px;
     max-width: 700px;
     background: #fff;
@@ -98,5 +134,22 @@
         float: right;
         padding: 15px 35px;
         @include font-size(16);
+    }
+
+    @include breakpoint(0, 740px) {
+        margin-top: 50px;
+        max-width: 80%
+    }
+
+    @include breakpoint(0, 520px) {
+        padding: 60px 50px 45px;
+
+        legend {
+            @include font-size(20);
+        }
+
+        .btn {
+            width: 100%;
+        }
     }
 }

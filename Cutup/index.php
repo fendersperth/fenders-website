@@ -7,9 +7,10 @@
 			<?php include 'parts/header.php'; ?>
 
             <div class="hero">
+                <h2>We're a group of Front-Enders and Web People with <span>.class</span></h2>
+            </div>
 
-                <h2>We're a group of Front-Enders<br>and Web People with <span>.class</span></h2>
-
+            <div class="cta">
                 <h3>Join the fun with our upcoming events</h3>
             </div>
 
