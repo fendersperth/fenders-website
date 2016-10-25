@@ -73,56 +73,6 @@ gulp.task('images', function() {
         }));
 });
 
-// 1. Uglify own src files.
-gulp.task('uglify', function() {
-    return gulp.src('js/src/*.js')
-        .pipe(uglify({
-            preserveComments : 'some'
-        }))
-        .pipe(rename({
-            suffix : '-ugl',
-            extname : '.js'
-        }))
-        .pipe(gulp.dest('js/min/'))
-        .pipe(notify({
-            message : 'Source JS uglified!'
-        }));
-});
-
-// 2. Uglify third-party (lib) non-minified scripts.
-gulp.task('uglify-lib', function() {
-    return gulp.src(['js/lib/*.js', '!js/lib/*.min.js'])
-        .pipe(uglify({
-            preserveComments : 'some'
-        }))
-        .pipe(rename({
-            suffix: '.min',
-            extname: '.js'
-        }))
-        .pipe(gulp.dest('js/lib/'))
-        .pipe(notify({
-            message: 'Third-party JS uglified!'
-        }))
-        .on('end', function() {
-            del(['js/lib/*.js', '!js/lib/*.min.js'])
-        });
-});
-
-// 3. Concatenate pre-minified files + uglified src files.
-gulp.task('concat', ['uglify', 'uglify-lib'], function() {
-    // Concat & return
-    return gulp.src(
-        ['js/lib/*.min.js', 'js/min/*-ugl.js'],
-        {
-            base : 'js/'
-        })
-        .pipe(concat('build.js'))
-        .pipe(gulp.dest('js'))
-        .pipe(notify({
-            message : 'All JavaScript uglified and concatenated!'
-        }));
-});
-
 // Run combine media queries on the CSS.
 gulp.task('mmq', function () {
     gulp.src('css/**/*.css')
@@ -141,8 +91,6 @@ gulp.task('default', function() {
 gulp.task('watch', function() {
 	gulp.watch('css/**/*.scss', ['styles']);
 	// gulp.watch('img/**/*', ['images']);
-	gulp.watch('js/src/*', ['concat']);
-	gulp.watch('js/lib/*', ['concat']);
 });
 
 gulp.task('minify', function() {
