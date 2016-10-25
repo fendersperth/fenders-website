@@ -1,0 +1,151 @@
+import React from 'react';
+import request from 'superagent';
+import makeRule from 'makerule';
+
+const validateEmail = makeRule.rule().isString().isEmail().required();
+const validateName = makeRule.rule().isString().required().longerThan(0);
+
+// lol an "api" request
+function doAPIRequest(name, email) {
+	return request.post('https://fendersslack.herokuapp.com/invite')
+		.set('Content-Type', 'application/json')
+		.send({ name, email })
+		.end();
+};
+
+export default React.createClass({
+
+	getInitialState() {
+		return {
+			loading: false,
+			submitError: false,
+			name: "",
+			nameError: false,
+			email: "",
+			emailError: false
+		};
+	},	
+
+	handleEmailChange(e) {
+		let email = e.target.value;
+		this.setState({ email });
+	},
+
+	handleEmailBlur(e) {
+		// if the email validates incorrectly, then shut it down.
+		let email = e.target.value;
+		this.doEmailValidation(email);
+	},
+
+	doEmailValidation(email) {
+		const validation = validateEmail(email);
+		if (!validation.result) { 
+			this.setState({ 
+				emailError : "Sorry, looks like you've entered an inccorectly formated email... do you mind fixing it up?" 
+			});
+		} else {
+			this.setState({ emailError: false });
+		}
+		return validation;
+	},
+
+	handleNameBlur(e) {
+		let name = e.target.value;
+		this.doNameValidation(name);
+	},
+
+	doNameValidation(name) {
+		const validation = validateName(name);
+		if (!validation.result) { 
+			this.setState({ 
+				nameError : "Sorry, we need your name before signing you up!" 
+			});
+		} else {
+			this.setState({ nameError: false });
+		}
+		return validation;
+	},
+
+	handleNameChange(e) {
+		let name = e.target.value;
+		this.setState({ name });
+	},
+
+	handleSubmit(e) {
+		e.preventDefault();
+
+		let { name, email } = this.state;
+
+		let emailValidation = this.doEmailValidation(email);
+		let nameValidation = this.doNameValidation(name);
+
+		if (!emailValidation.result || !nameValidation.result) {
+			return false;
+		}
+
+		// make sure to clear the validation
+		this.setState({ nameError: false, submitError: false, emailError: false, loading: true });
+		
+		doAPIRequest(name, email)
+			.then(result => this.handleSubmitSuccess(result))
+			.catch(error => this.handleSubmitError(error));
+	},
+
+	handleSubmitSuccess(result) {
+
+	},
+
+	handleSubmitError(error) {
+		this.setState({
+			submitError: "Sorry, we had some trouble submitting this form... please refresh your page and try again. If that doesn't work please get in contact with us.",
+			loading: false,
+			name: "",
+			email: ""
+		});
+	},
+
+	render() {
+
+		if (this.state.submitError) return <form className="join clearfix" action="" method="post" onSubmit={this.handleSubmit}>
+			<div className="validation-error" style={{ 'margin-bottom': 0 }}>{this.state.submitError}</div>
+		</form>;
+
+		return <form className="join clearfix" action="" method="post" onSubmit={this.handleSubmit}>
+			<legend>Join the convo with <span>312</span> other Fenders on Slack!</legend>
+
+			<label>
+				<span className="hidden">Your Name</span>
+				<input 
+					type="text" 
+					name="name" 
+					placeholder="Your Name" 
+					className={`required ${(this.state.nameError ? 'error' : '')}`} 
+					aria-required="true" 
+					onChange={this.handleNameChange}
+					onBlur={this.handleNameBlur} />
+					{this.state.nameError &&
+						<div className="validation-error">{this.state.nameError}</div>
+					}
+			</label>
+
+			<label>
+				<span className="hidden">Email Address</span>
+				<input 
+					type="email" 
+					name="email" 
+					placeholder="Email address" 
+					className={`required email ${(this.state.emailError ? 'error' : '')}`} 
+					aria-required="true" 
+					onChange={this.handleEmailChange} 
+					onBlur={this.handleEmailBlur} />
+					{this.state.emailError &&
+						<div className="validation-error">{this.state.emailError}</div>
+					}
+			</label>
+
+			<button className="btn" type="submit">Get me in!</button>
+
+		</form>
+	}
+
+});

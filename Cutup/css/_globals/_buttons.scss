@@ -49,4 +49,9 @@
             background-color: lighten(#604b86, 10%);
         }
 	}
+
+	&[disabled] {   
+         	background-color: grey;
+         	opacity: 0.5;	   
+        }
 }

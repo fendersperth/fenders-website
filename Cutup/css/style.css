@@ -652,6 +652,11 @@ a img.aligncenter {
 	background-color: #785fa5;
 }
 
+.btn[disabled] {
+	background-color: grey;
+	opacity: 0.5;
+}
+
 html {
 	font-size: 6.25%;
 	-webkit-text-size-adjust: 100%;
@@ -1046,8 +1051,18 @@ form input.error:focus + label.error:after {
 
 form textarea.error,
 form input.error {
-	border-color: #d03838;
+	border-bottom-color: #d03838;
+	color: #d03838;
 	transition: border-color 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+}
+
+form div.validation-error {
+	font-size: 18px;
+	font-size: 1.8rem;
+	line-height: 1.4;
+	display: block;
+	margin-bottom: 40px;
+	color: #d03838;
 }
 
 header {
@@ -1330,6 +1345,7 @@ body {
 .home .join input {
 	font-size: 18px;
 	font-size: 1.8rem;
+	border-radius: 0;
 	position: relative;
 	background: #fff;
 	border-bottom: 1px solid #eeeeee;
@@ -1340,6 +1356,11 @@ body {
 	transition: border-color 0.2s ease-in-out, color 0.2s ease-in-out;
 	padding: 10px 0;
 	margin-bottom: 40px;
+}
+
+.home .join input.error {
+	border-bottom-color: #d03838;
+	color: #d03838;
 }
 
 .home .join .btn {
