@@ -38,17 +38,10 @@ var uglifyPlugin = new webpack.optimize.UglifyJsPlugin({
 });
 
 var settings = {
-	// sass : {
-	// 	outputStyle : (env === 'development' ? 'nested' : 'compressed')
-	// },
-	// autoprefixer: {
-	// 	browsers: ['> 1%', 'last 2 versions', 'IE 8', 'IE 9', 'Firefox >= 25', 'Firefox ESR', 'Opera 12.1']
-	// },
-	minify : (env === 'production'),
+	minify : true,
 	eslint : {
-		quiet : (env === 'production')
-	},
-	devtool : (env === 'production') ? 'source-map' : 'eval-cheap-source-map'
+		quiet : 'production'
+	}
 };
 
 /*----------------------------------------------------------
@@ -57,35 +50,43 @@ Setup
 
 module.exports = {
 
-	context: path.join(process.env.PWD, 'src'),
-
 	entry: {
-		'app': 'app/index',
+		'main': 'index',
 	},
 
 	output: {
-		path: buildPath,
-		filename: "[name].js"
+		path: path.join(__dirname, 'js', 'min'),
+		filename: "[name].min.js"
 	},
 
 	module: {
 		preLoaders: [
-			{test: /\.jsx$/, exclude: /(node_modules|vendor)/, loader: "eslint-loader"},
-			{test: /\.js$/, exclude: /(node_modules|vendor)/, loader: "eslint-loader"}
+			{
+				test: /\.j(s|sx)$/,
+				exclude: /(node_modules|vendor)/,
+				loader: "eslint-loader"
+			}
 		],
 		loaders: [
-			{ test: /\.jsx$/, loaders: ['react-hot', 'babel'], exclude: /(node_modules|vendor)/ },
-			{ test: /\.js$/, loaders: ['react-hot', 'babel'], exclude: /(node_modules|vendor)/ },
+			{
+				test: /\.j(s|sx)$/,
+				loaders: ['babel'],
+				exclude: /(node_modules|vendor)/
+			}
 		]
 	},
 
-	eslint: settings.eslint,
+	devtool: 'source-map',
+
+	eslint: {
+		quiet: false
+	},
 
 	resolve: {
 		root: [
-			path.resolve('./src'),
+			path.join(__dirname, 'js'),
 		],
-		extensions: ['', '.js', '.html', '.jsx']
+		extensions: ['', '.js', '.html', '.jsx', ]
 	},
 
 	plugins: [
@@ -93,24 +94,10 @@ module.exports = {
 		new webpack.NoErrorsPlugin(),
 		new webpack.DefinePlugin({
 			'process.env': {
-				NODE_ENV: '"' + env + '"'
+				NODE_ENV: JSON.stringify('production')
 			}
-		})
-	].concat((env === 'production') ? [
+		}),
 		uglifyPlugin,
 		new webpack.optimize.OccurenceOrderPlugin()
-	] : []),
-
-	stats: {
-		// Nice colored output
-		colors: true
-	},
-
-	// // Create Sourcemaps for the bundle
-	devtool: settings.devtool,
-
-	node: {
-		console: true
-	}
-
+	]
 };

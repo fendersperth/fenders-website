@@ -12,8 +12,8 @@ Setup
 
 module.exports = {
 
-  // // Create Sourcemaps for the bundle
-  devtool: 'cheap-module-source-map',
+	  // // Create Sourcemaps for the bundle
+	  devtool: 'cheap-module-source-map',
 
 	entry: {
 		'main': 'index',
