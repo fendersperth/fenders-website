@@ -1,0 +1,45 @@
+// Hide from screen / hide from eyes
+.u-hide {
+	display: none;
+}
+.u-vis-hide {
+	@include hide;
+}
+
+
+// Reset all navigational lists
+nav{
+	ul {
+		list-style: none;
+		padding: 0;
+	}
+	ul, li {
+		margin: 0;
+	}
+}
+
+
+// icon helper
+.icon {
+	&:before,
+	&:after {
+		font-family: "Icons";
+			-webkit-font-smoothing: antialiased;
+			-moz-osx-font-smoothing: grayscale;
+		font-style: normal;
+		font-variant: normal;
+		font-weight: normal;
+		/* speak: none; only necessary if not using the private unicode range (firstGlyph option) */
+		text-decoration: none;
+		text-transform: none;
+		line-height: 1;
+	}
+}
+
+
+// Cover class
+.cover {
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+}

@@ -1,0 +1,75 @@
+// Box sizing
+// --------------------------------------------------
+*, *:before, *:after {
+	box-sizing: border-box;
+}
+*:focus {
+	outline: none;
+}
+
+
+// Highlighted
+// --------------------------------------------------
+::selection {
+	background: transparentize($buttonColor,  .5);
+	color: white;
+}
+
+
+// Page layout
+// --------------------------------------------------
+
+html {
+	height: 100%;
+	font-size: 62.5%;
+	-webkit-text-size-adjust: 100%;
+	-ms-text-size-adjust: 100%;
+	text-rendering: geometricPrecision;
+	-webkit-font-smoothing: antialiased;
+}
+
+body {
+	@include font-size(16);
+	background: $bgColor;
+	font-family: $fontStack;
+	font-weight: 300;
+	line-height: 1.5;
+	color: $color_1;
+}
+
+
+// Layout
+// --------------------------------------------------
+
+.page-container {
+	width: 100%;
+	overflow: hidden;
+	position: relative;
+}
+
+.outer-container {
+	max-width: 1800px;
+	margin: 0 auto;
+	width: 100%;
+	position: relative;	
+	background: #604b86;
+}
+
+.container {
+	@include clearfix();
+	padding: 0 20px;
+	margin: 0 auto;
+	display: block;
+	position: relative;
+	
+	max-width: $containerStd;
+	
+	&.narrow {
+		max-width: $containerNar;
+	}
+	
+	&.full {
+		max-width: $containerFul;
+		padding: 0;
+	}
+}

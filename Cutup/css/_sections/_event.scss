@@ -1,0 +1,331 @@
+header {
+    padding: 24px 35px;
+
+    h1 {
+        margin: 0;
+        float: left;
+    }
+
+    .logo {
+
+    }
+
+    nav {
+        float: right;
+    }
+
+    ul {
+
+        li {
+            display: inline;
+        }
+    } 
+
+    .btn {
+        margin: 0 10px;
+    }
+}
+
+footer {
+    margin-top: 70px;
+    border-top: 1px solid #7f65ae;
+    padding: 25px 0;
+
+    .container {
+        max-width: 1160px;
+    }
+
+    .logo {
+        float: left;
+    }
+
+    nav {
+        float: left;
+
+        &.social {
+            float: right;
+        }
+    }
+
+    ul {
+
+        li {
+            display: inline;
+            margin: 0 10px;
+        }
+    }
+}
+
+.event-list {
+    height: 190px;
+    margin-top: 90px;
+
+    article {
+        position: relative;
+        float: left;
+        width: 200px;
+        height: 100%;
+        padding: 15px 15px 30px;
+        border-radius: 5px;
+        margin: 0 20px 0 0;
+        border: 1px solid lighten(#604b86, 30%);
+
+        &.active {
+            background: #fff;
+        }
+
+        .month {
+            position: absolute;
+            top: -30px;
+            color: #fff;
+        }
+
+        .tag {
+            display: block;
+
+            &.talk {
+
+            }
+            &.workshop {
+
+            }
+            &.social {
+
+            }
+            &.hack {
+
+            }
+        }
+
+        strong {
+
+        }
+
+        .date {
+            position: absolute;
+            display: block;
+            bottom: 10px;
+        }
+    }
+}
+
+.event .strapline {
+    position: relative;
+    min-height: 300px;
+    padding-right: 390px;
+
+    h2 {
+        color: #fff;
+        text-align: center;
+        max-width: 80%;
+        margin: 0 auto;
+    }
+
+    .breakout {
+        position: absolute;
+        top: 0;
+        right: 20px;
+        width: 350px;
+        height: 390px;
+        padding: 23px 20px;
+        background: #fff;
+        border-radius: 5px;
+        box-shadow: 0px 10px 30px 0px rgba(0,0,0,0.1);
+
+        .date {
+            display: block;
+            text-align: center;
+        }
+
+        .day {
+            display: block;
+            text-align: center;
+        }
+
+        .info {
+            border-radius: 5px;
+            background: #f4f4f4;
+            padding: 12px 0;
+
+            .value {
+                width: 49%;
+                display: inline-block;
+                text-align: center;
+
+                &:first-child {
+                    border-right: 1px solid #d7d7d7;
+                }
+            }
+
+            .label {
+                display: block;
+            }
+        }
+
+        .attendance {
+            padding: 20px 0 30px;
+
+            .avatars {
+
+                span {
+                    display: block;
+                    float: left;
+                    width: 45px;
+                    height: 45px;
+                    border-radius: 50%;
+                    overflow: hidden;
+                    margin: 0 0 0 -20px;
+
+                    &:first-child {
+                        margin: 0 0 0 0;
+                    }
+                }
+
+                img {
+
+                }
+            }
+
+            .attendees {
+
+                a {
+                    display: block;
+                }
+            }
+
+        }
+
+        .purchase {
+            width: 100%;
+            @include bold();
+        }
+    }
+}
+
+.event .content {
+    max-width: 1160px;
+    min-height: 500px;
+    margin: 135px auto 0;
+
+    .col-wrapper {
+        @include clearfix();
+        border-radius: 5px;
+        background: linear-gradient(90deg, #fff calc(100% - 390px), #fafafa calc(100% - 390px));
+        box-shadow: 0px 20px 50px 0px rgba(0,0,0,0.2);
+    }
+
+    .col {
+        display: inline-block;
+
+        &:nth-child(2) {
+            float: left;
+            width: calc(100% - 390px);
+            padding: 70px 40px 75px 35px;
+        }
+
+        &:nth-child(1) {
+            float: right;
+            width: 390px;
+            padding: 100px 40px 75px 40px;
+        }
+    }
+}
+
+.schedule {
+
+}
+
+.event .sidebar {
+
+    .calendar {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+
+        li {
+            float: left;
+            width: calc(100% / 7);
+            text-align: center;
+
+            .day {
+
+            }
+
+            .date {
+                display: block;
+                margin: 0 5px 0 0;
+                border-radius: 5px;
+                border: 1px solid #e6e6e6;
+                background: #fff;
+            }
+
+            .month {
+                display: none;
+            }
+
+            &.active {
+
+                .date {
+                    color: #fff;
+                    border: 1px solid #fe5a7d;
+                    background: #fe5a7d;
+                }
+
+                .month {
+                    display: block;
+                }
+            }
+        }
+    }
+
+    .date-time {
+        margin-top: 30px;
+    }
+
+    .meta {
+        display: block;
+        padding-left: 40px;
+
+        strong {
+
+        }
+
+        &.date {
+
+        }
+        &.start {
+
+        }
+        &.duration {
+
+        }
+        &.pin {
+
+        }
+    }
+
+    .meta-box {
+        border-top: 2px solid #f0f0f0;
+        margin-top: 50px;
+        padding-top: 30px;
+
+        h4 {
+
+        }
+    }
+
+    .location {
+
+        .map {
+
+        }
+    }
+
+    .sponsors {
+
+        img {
+
+        }
+    }
+
+}
