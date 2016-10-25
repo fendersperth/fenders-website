@@ -1,7 +1,9 @@
 <header class="clearfix" role="banner">
 
     <h1>
-        <a class="logo" href="" title="Fenders">Fenders</a>
+        <a class="logo" href="/" title="Fenders">
+            <span>Fenders</span>
+        </a>
     </h1>
 
     <nav>
