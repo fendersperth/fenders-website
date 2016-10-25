@@ -50,3 +50,6 @@ GeoIPv6.dat
 # Editor
 *.sublime-project
 *.sublime-workspace
+
+# Build system
+/Cutup/js/min**/*
