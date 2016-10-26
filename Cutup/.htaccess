@@ -1,4 +1,7 @@
 # basic compression
+<ifmodule mod_deflate.c>
+	AddOutputFilterByType DEFLATE text/text text/html text/plain text/xml text/css application/x-javascript application/javascript text/javascript
+</ifmodule>
 <IfModule mod_gzip.c>
 	mod_gzip_on Yes
 	mod_gzip_dechunk Yes
