@@ -6,11 +6,11 @@ import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 const validateEmail = makeRule.rule().isString().isEmail().required();
 const validateName = makeRule.rule().isString().required().longerThan(0);
 
-Beek1946@einrot.com
+
 // lol an "api" request
 function doAPIRequest(name, email) {
 	return request.post('/inviteToSlack.php')
-		.set('Content-Type', 'application/json')
+		.type('form')
 		.send({ name, email })
 		.end();
 };
@@ -116,12 +116,12 @@ export default React.createClass({
 	render() {
 
 		if (this.state.submitError) return <form className="join clearfix" action="" method="post" onSubmit={this.handleSubmit}>
-			<div className="validation-error" style={{ 'margin-bottom': 0 }}>{this.state.submitError}</div>
+			<div className="validation-error" style={{ 'marginBottom': 0, 'marginTop' : 0 }}>{this.state.submitError}</div>
 		</form>;
 
 		return <form className={`join clearfix ${(this.state.loading && 'loading') || ''}`} action="" method="post" onSubmit={this.handleSubmit}>
 
-			{this.state.loading && <div class="loader">Loading...</div>}
+			{this.state.loading && <div className="loader">Loading...</div>}
 
 			<legend>
 				{(() => {
@@ -138,6 +138,7 @@ export default React.createClass({
 				<input 
 					type="text" 
 					name="name" 
+					value={this.state.name}
 					placeholder="Your Name" 
 					className={`required ${(this.state.nameError ? 'error' : '')}`} 
 					aria-required="true" 
@@ -153,6 +154,7 @@ export default React.createClass({
 				<input 
 					type="email" 
 					name="email" 
+					value={this.state.email}
 					placeholder="Email address" 
 					className={`required email ${(this.state.emailError ? 'error' : '')}`} 
 					aria-required="true" 
