@@ -2065,6 +2065,14 @@ textarea {
 
 }
 
+@media (max-height: 740px) {
+
+.home .hero {
+	min-height: 200px;
+}
+
+}
+
 @keyframes load3 {
 
 0% {
