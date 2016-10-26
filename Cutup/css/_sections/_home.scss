@@ -92,8 +92,13 @@
     max-width: 700px;
     background: #fff;
 
-    &.loading .loader {
-        margin: 0 auto;
+    &.loading {
+        & > * { display: none; }
+        .loader { margin: 0 auto; display: block; }
+    }
+
+    span.success {
+        color: darken(#00D08A, 6%);
     }
 
     legend {
