@@ -1,7 +1,6 @@
 var gulp = require('gulp'),
 	sass = require('gulp-sass'),
 	autoprefixer = require('gulp-autoprefixer'),
-	uglify = require('gulp-uglify'),
 	rename = require('gulp-rename'),
 	minifycss = require('gulp-minify-css'),
 	concat = require('gulp-concat'),
@@ -84,7 +83,7 @@ gulp.task('mmq', function () {
 
 // Run all major tasks when just `gulp` is run.
 gulp.task('default', function() {
-	gulp.start('styles', 'concat', 'images');
+	gulp.start('styles', 'images');
 });
 
 // Watch these files and run tasks when they're modified.

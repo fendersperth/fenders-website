@@ -242,9 +242,19 @@ form {
 	}
 	textarea.error,
 	input.error {
-		border-color: $error;
+		border-bottom-color: $error;
+		color: $error;
 		transition:
 			border-color $timing ease-in-out,
 			box-shadow $timing ease-in-out;
+	}
+
+	// error styles for error message
+	div.validation-error {
+		@include font-size(18);
+		line-height: 1.4;
+		display: block;
+		margin-bottom: 40px;
+		color: $error;
 	}
 }
