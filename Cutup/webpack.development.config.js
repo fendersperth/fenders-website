@@ -42,7 +42,7 @@ module.exports = {
 	},
 
 	eslint: {
-		quiet: false
+		quiet: true
 	},
 
 	resolve: {
@@ -53,14 +53,14 @@ module.exports = {
 	},
 
 	plugins: [
-		new webpack.optimize.OccurenceOrderPlugin(),
-		new webpack.DefinePlugin({
-			'process.env': {
-				NODE_ENV: '"DEVELOPMENT"'
-			}
-		}),
 		// Avoid publishing files when compilation failed
 		new webpack.NoErrorsPlugin(),
+		new webpack.DefinePlugin({
+			'process.env': {
+				NODE_ENV: '"development"'
+			}
+		}),
+		new webpack.optimize.OccurenceOrderPlugin()
 	],
 
 	stats: {

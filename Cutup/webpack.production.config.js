@@ -6,11 +6,6 @@ Settings
 var webpack = require("webpack");
 var path = require('path');
 
-// Paths
-var projectRoot = process.env.PWD; // Absolute path to the project root
-var resolveRoot = path.join(projectRoot, 'node_modules'); // project root/node_modules
-var buildPath = path.resolve(__dirname, 'build/');
-
 // Plugins
 var uglifyPlugin = new webpack.optimize.UglifyJsPlugin({
 	sourceMap: true,

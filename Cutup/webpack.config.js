@@ -3,7 +3,7 @@ Settings
 ----------------------------------------------------------*/
 
 // env
-const environment = process.env.NODE_ENV === 'PRODUCTION' ?
+const environment = process.env.NODE_ENV === 'production' ?
   'production'
   : 'development'
 
