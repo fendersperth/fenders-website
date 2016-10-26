@@ -53,3 +53,5 @@ GeoIPv6.dat
 
 # Build system
 /Cutup/js/min**/*
+/Cutup/slack_keys.php
+/getChannels.py

@@ -6,9 +6,10 @@ import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 const validateEmail = makeRule.rule().isString().isEmail().required();
 const validateName = makeRule.rule().isString().required().longerThan(0);
 
+Beek1946@einrot.com
 // lol an "api" request
 function doAPIRequest(name, email) {
-	return request.post('https://fendersslack.herokuapp.com/invite')
+	return request.post('/inviteToSlack.php')
 		.set('Content-Type', 'application/json')
 		.send({ name, email })
 		.end();
@@ -94,6 +95,7 @@ export default React.createClass({
 	},
 
 	handleSubmitSuccess(result) {
+		console.log(result);
 		this.setState({
 			loading: false,
 			submitted: true,
@@ -102,6 +104,7 @@ export default React.createClass({
 	},
 
 	handleSubmitError(error) {
+		console.log(error);
 		this.setState({
 			submitError: "Sorry, we had some trouble submitting this form... please refresh your page and try again. If that doesn't work please get in contact with us.",
 			loading: false,
