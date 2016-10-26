@@ -620,7 +620,7 @@ a img.aligncenter {
 .btn:hover,
 .btn:focus {
 	color: white;
-	background-color: #06feaa;
+	background-color: #019d68;
 }
 
 .btn.purple {
@@ -827,7 +827,7 @@ label {
 input,
 textarea {
 	-webkit-appearance: none;
-	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+	font-family: "proxima-nova-soft", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 	background: white;
 	border: 0;
 	border-bottom: 4px solid;
@@ -1053,8 +1053,8 @@ form input.error {
 }
 
 form div.validation-error {
-	font-size: 18px;
-	font-size: 1.8rem;
+	font-size: 14px;
+	font-size: 1.4rem;
 	line-height: 1.4;
 	display: block;
 	margin-bottom: 40px;
@@ -1172,6 +1172,11 @@ footer .logo span {
 	clip: rect(0 0 0 0);
 }
 
+footer .logo:hover,
+footer .logo:active {
+	opacity: 0.7;
+}
+
 footer nav {
 	float: left;
 }
@@ -1249,7 +1254,7 @@ body {
 	font-size: 16px;
 	font-size: 1.6rem;
 	background: #604b86;
-	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+	font-family: "proxima-nova-soft", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 	font-weight: 300;
 	line-height: 1.5;
 	color: #27282d;
@@ -1533,8 +1538,8 @@ body {
 	lefT: 0;
 	color: #fff;
 	font-weight: 700;
-	font-size: 12px;
-	font-size: 1.2rem;
+	font-size: 13px;
+	font-size: 1.3rem;
 }
 
 .event-list article .tag {
@@ -1542,8 +1547,8 @@ body {
 	display: block;
 	padding-left: 20px;
 	font-weight: 700;
-	font-size: 12px;
-	font-size: 1.2rem;
+	font-size: 13px;
+	font-size: 1.3rem;
 }
 
 .event-list article .tag.icon:before {
@@ -1577,7 +1582,8 @@ body {
 
 .event-list article strong {
 	display: block;
-	margin-top: 20px;
+	margin-top: 15px;
+	line-height: 1.2;
 }
 
 .event-list article .date {
@@ -1585,8 +1591,8 @@ body {
 	display: block;
 	bottom: 10px;
 	opacity: 0.7;
-	font-size: 12px;
-	font-size: 1.2rem;
+	font-size: 13px;
+	font-size: 1.3rem;
 }
 
 .event .strapline {
