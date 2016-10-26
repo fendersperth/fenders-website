@@ -31,6 +31,9 @@
     <script src="/js/lib/matchMedia.min.js"></script>
     <![endif]-->
 
+    <script src="https://use.typekit.net/gmb1xlg.js"></script>
+    <script>try{Typekit.load({ async: true });}catch(e){}</script>
+
     <!-- Favicons -->
     <link rel="shortcut icon" href="img/favicon.ico">
     <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
