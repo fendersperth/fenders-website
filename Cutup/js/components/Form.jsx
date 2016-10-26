@@ -8,15 +8,16 @@ const validateName = makeRule.rule().isString().required().longerThan(0);
 
 function doAPIRequestForMembers(name, email) {
 	return request.get('/meetupInfo.php')
-		.end();
+		.end((err, res) => {});
 };
 
 // lol an "api" request
 function doAPIRequestForForm(name, email) {
+	console.log('request');
 	return request.post('/inviteToSlack.php')
 		.type('form')
 		.send({ name, email })
-		.end();
+		.end((err, res) => {});
 };
 
 export default React.createClass({
