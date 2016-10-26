@@ -6,9 +6,13 @@ import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 const validateEmail = makeRule.rule().isString().isEmail().required();
 const validateName = makeRule.rule().isString().required().longerThan(0);
 
+function doAPIRequestForMembers(name, email) {
+	return request.get('/meetupInfo.php')
+		.end();
+};
 
 // lol an "api" request
-function doAPIRequest(name, email) {
+function doAPIRequestForForm(name, email) {
 	return request.post('/inviteToSlack.php')
 		.type('form')
 		.send({ name, email })
@@ -19,7 +23,7 @@ export default React.createClass({
 
 	getInitialState() {
 		return {
-			fenderNumber: 312,
+			fenderNumber: false,
 			loading: false,
 			submitted: false,
 			submitError: false,
@@ -28,6 +32,17 @@ export default React.createClass({
 			email: "",
 			emailError: false
 		};
+	},	
+
+	componentDidMount() {
+		doAPIRequestForMembers()
+			.then(result => {
+				let response = JSON.parse(result.text);
+				this.setState({ fenderNumber: 954 });
+			})
+			.catch(error => {
+				this.setState({ fenderNumber: '900+' });
+			});
 	},	
 
 	handleEmailChange(e) {
@@ -87,9 +102,9 @@ export default React.createClass({
 			return false;
 		}
 		
-		this.setState({ nameError: false, submitError: false, emailError: false, loading: true });
+		this.setState({ submitted: false, nameError: false, submitError: false, emailError: false, loading: true });
 		
-		doAPIRequest(name, email)
+		doAPIRequestForForm(name, email)
 			.then(result => this.handleSubmitSuccess(result))
 			.catch(error => this.handleSubmitError(error));
 	},
@@ -126,10 +141,10 @@ export default React.createClass({
 			<legend>
 				{(() => {
 					if (!this.state.submitted) {
-						return <span>Join the convo with <span className="legend-note">{this.state.fenderNumber}</span> other Fenders on Slack!</span>
+						return <span>Join the convo with <span className="legend-note">{this.state.fenderNumber || '...'}</span> other Fenders on Slack!</span>
 					}
 					// printing here because of weird symbols - I forget how to do this for reals
-					return <span>{`Invitation sent. We're excited to meet you :)`}</span>;
+					return <span className="success">{`Invitation sent. We're excited to meet you :)`}</span>;
 				})()}
 			</legend>
 
