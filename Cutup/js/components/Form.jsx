@@ -1,6 +1,7 @@
 import React from 'react';
 import request from 'superagent';
 import makeRule from 'makerule';
+import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 
 const validateEmail = makeRule.rule().isString().isEmail().required();
 const validateName = makeRule.rule().isString().required().longerThan(0);
@@ -17,7 +18,9 @@ export default React.createClass({
 
 	getInitialState() {
 		return {
+			fenderNumber: 312,
 			loading: false,
+			submitted: false,
 			submitError: false,
 			name: "",
 			nameError: false,
@@ -82,8 +85,7 @@ export default React.createClass({
 		if (!emailValidation.result || !nameValidation.result) {
 			return false;
 		}
-
-		// make sure to clear the validation
+		
 		this.setState({ nameError: false, submitError: false, emailError: false, loading: true });
 		
 		doAPIRequest(name, email)
@@ -92,7 +94,11 @@ export default React.createClass({
 	},
 
 	handleSubmitSuccess(result) {
-
+		this.setState({
+			loading: false,
+			submitted: true,
+			fenderNumber: ++this.state.fenderNumber
+		});
 	},
 
 	handleSubmitError(error) {
@@ -110,8 +116,19 @@ export default React.createClass({
 			<div className="validation-error" style={{ 'margin-bottom': 0 }}>{this.state.submitError}</div>
 		</form>;
 
-		return <form className="join clearfix" action="" method="post" onSubmit={this.handleSubmit}>
-			<legend>Join the convo with <span>312</span> other Fenders on Slack!</legend>
+		return <form className={`join clearfix ${(this.state.loading && 'loading') || ''}`} action="" method="post" onSubmit={this.handleSubmit}>
+
+			{this.state.loading && <div class="loader">Loading...</div>}
+
+			<legend>
+				{(() => {
+					if (!this.state.submitted) {
+						return <span>Join the convo with <span className="legend-note">{this.state.fenderNumber}</span> other Fenders on Slack!</span>
+					}
+					// printing here because of weird symbols - I forget how to do this for reals
+					return <span>{`Invitation sent. We're excited to meet you :)`}</span>;
+				})()}
+			</legend>
 
 			<label>
 				<span className="hidden">Your Name</span>
