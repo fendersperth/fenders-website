@@ -1,23 +1,32 @@
 import React from 'react';
 import request from 'superagent';
 import makeRule from 'makerule';
-import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
+import Deferred from 'd.js';
 
 const validateEmail = makeRule.rule().isString().isEmail().required();
 const validateName = makeRule.rule().isString().required().longerThan(0);
 
 function doAPIRequestForMembers(name, email) {
-	return request.get('/meetupInfo.php')
-		.end((err, res) => {});
+	let d = Deferred();
+	request.get('/meetupInfo.php')
+		.end((err, res) => {
+			 if(err) return d.reject(err);
+			 return d.resolve(res);
+		});
+	return d.promise;
 };
 
 // lol an "api" request
 function doAPIRequestForForm(name, email) {
-	console.log('request');
-	return request.post('/inviteToSlack.php')
+	let d = Deferred();
+	request.post('/inviteToSlack.php')
 		.type('form')
 		.send({ name, email })
-		.end((err, res) => {});
+		.end((err, res) => {
+			if(err) return d.reject(err);
+			 return d.resolve(res);
+		});
+	return d.promise;
 };
 
 export default React.createClass({
@@ -41,7 +50,7 @@ export default React.createClass({
 				let response = JSON.parse(result.text);
 				this.setState({ fenderNumber: 954 });
 			})
-			.catch(error => {
+			.error(error => {
 				this.setState({ fenderNumber: '900+' });
 			});
 	},	
@@ -107,11 +116,10 @@ export default React.createClass({
 		
 		doAPIRequestForForm(name, email)
 			.then(result => this.handleSubmitSuccess(result))
-			.catch(error => this.handleSubmitError(error));
+			.error(error => this.handleSubmitError(error));
 	},
 
 	handleSubmitSuccess(result) {
-		console.log(result);
 		this.setState({
 			loading: false,
 			submitted: true,
