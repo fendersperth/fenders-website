@@ -1344,7 +1344,7 @@ body {
 }
 
 .home .hero h2 {
-	font-weight: 700;
+	font-weight: 600;
 	font-size: 55px;
 	font-size: 5.5rem;
 	position: relative;
@@ -1371,13 +1371,14 @@ body {
 	position: relative;
 	text-align: center;
 	color: #fff;
+	font-weight: 600;
 	font-size: 26px;
 	font-size: 2.6rem;
 }
 
 .home .cta h3:after {
-	font-size: 12px;
-	font-size: 1.2rem;
+	font-size: 8px;
+	font-size: 0.8rem;
 	font-family: "Icons";
 	display: inline-block;
 	vertical-align: middle;
@@ -1400,10 +1401,11 @@ body {
 
 .home .join {
 	padding: 60px 70px 45px;
-	margin: 100px auto 0;
+	margin: 100px auto 50px;
 	border-radius: 5px;
 	max-width: 700px;
 	background: #fff;
+	box-shadow: 0 10px 30px 0px rgba(0, 0, 0, 0.3);
 }
 
 .home .join.loading > * {
@@ -1420,8 +1422,9 @@ body {
 }
 
 .home .join legend {
-	font-size: 26px;
-	font-size: 2.6rem;
+	font-weight: 600;
+	font-size: 25px;
+	font-size: 2.5rem;
 	text-align: center;
 	margin-bottom: 40px;
 }
@@ -1457,7 +1460,7 @@ body {
 	display: block;
 	color: #454545;
 	transition: border-color 0.2s ease-in-out, color 0.2s ease-in-out;
-	padding: 10px 0;
+	padding: 10px 0 5px;
 	margin-bottom: 40px;
 }
 
@@ -1466,15 +1469,47 @@ body {
 	color: #d03838;
 }
 
+.home .join input::-webkit-input-placeholder {
+	color: #aaa;
+}
+
+.home .join input:-moz-placeholder {
+	color: #aaa;
+}
+
+.home .join input::-moz-placeholder {
+	color: #aaa;
+}
+
+.home .join input:-ms-input-placeholder {
+	color: #aaa;
+}
+
+.home .join input:focus::-webkit-input-placeholder {
+	color: #aaa;
+}
+
+.home .join input:focus:-moz-placeholder {
+	color: #aaa;
+}
+
+.home .join input:focus::-moz-placeholder {
+	color: #aaa;
+}
+
+.home .join input:focus:-ms-input-placeholder {
+	color: #aaa;
+}
+
 .home .join .btn {
 	float: right;
 	padding: 15px 35px;
-	font-size: 16px;
-	font-size: 1.6rem;
+	font-size: 17px;
+	font-size: 1.7rem;
 }
 
 .event-list {
-	margin-top: 90px;
+	margin-top: 95px;
 }
 
 .event-list .wrapper {
@@ -1513,7 +1548,7 @@ body {
 .event-list article:focus,
 .event-list article.past {
 	border: 1px solid #6c5496;
-	background: #6c5496;
+	background: #866fae;
 }
 
 .event-list article.active {
@@ -1534,10 +1569,11 @@ body {
 
 .event-list article .month {
 	position: absolute;
+	opacity: 0.8;
 	top: -30px;
 	lefT: 0;
 	color: #fff;
-	font-weight: 700;
+	font-weight: 600;
 	font-size: 13px;
 	font-size: 1.3rem;
 }
@@ -1977,8 +2013,17 @@ body {
 
 @media (max-width: 500px) {
 
+header .logo {
+	width: calc(200px * 0.6);
+	height: calc(58px * 0.6);
+}
+
 header ul li span {
 	display: none;
+}
+
+header .btn {
+	margin: 0 5px;
 }
 
 }
@@ -1999,6 +2044,10 @@ textarea {
 }
 
 @media (max-width: 444px) {
+
+.event-list {
+	margin-top: 55px;
+}
 
 .event-list article {
 	width: 80%;

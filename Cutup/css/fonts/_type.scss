@@ -11,6 +11,10 @@ $margin: 0 0 20px;
     font-weight: 400;
 }
 
+@mixin semibold {
+    font-weight: 600;
+}
+
 @mixin bold {
     font-weight: 700;
 }
