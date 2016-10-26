@@ -17,6 +17,7 @@
         margin: 0 10px 50px 10px;
         border: 1px solid lighten(#604b86, 15%);
         transition: background $timing $ease-std;
+        vertical-align: top;
 
         &:hover,
         &:focus,
@@ -83,7 +84,6 @@
         }
 
         strong {
-            position: absolute;
             display: block;
             margin-top: 20px;
         }
