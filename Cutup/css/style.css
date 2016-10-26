@@ -761,10 +761,6 @@ a:focus {
 	content: "\E009";
 }
 
-.icon-logo:before {
-	content: "\E00A";
-}
-
 .alert {
 	font-size: 14px;
 	font-size: 1.4rem;
@@ -1101,6 +1097,24 @@ footer .container {
 
 footer .logo {
 	float: left;
+	display: block;
+	fill: #9c87c0;
+	width: calc(145px * 0.75);
+	height: calc(32px * 0.75);
+	background: url("../img/logo-mono.svg");
+	opacity: 0.5;
+	margin-right: 20px;
+}
+
+footer .logo span {
+	position: absolute;
+	width: 1px;
+	margin: -1px;
+	padding: 0;
+	overflow: hidden;
+	height: 1px;
+	border: 0;
+	clip: rect(0 0 0 0);
 }
 
 footer nav {
@@ -1112,8 +1126,39 @@ footer nav.social {
 }
 
 footer ul li {
-	display: inline;
+	display: inline-block;
 	margin: 0 10px;
+}
+
+footer ul li a {
+	display: block;
+	color: #fff;
+	font-weight: 700;
+	font-size: 14px;
+	font-size: 1.4rem;
+	transition: color 0.1s ease-in-out;
+}
+
+footer ul li a:hover,
+footer ul li a:active {
+	opacity: 0.8;
+}
+
+footer ul li a span {
+	position: absolute;
+	width: 1px;
+	margin: -1px;
+	padding: 0;
+	overflow: hidden;
+	height: 1px;
+	border: 0;
+	clip: rect(0 0 0 0);
+}
+
+footer ul li a.twitter {
+	width: 30px;
+	height: 23px;
+	background: url("../img/twitter.svg");
 }
 
 *,
@@ -1382,6 +1427,7 @@ body {
 	margin: 0 10px 50px 10px;
 	border: 1px solid #866fae;
 	transition: background 0.4s ease-in-out;
+	vertical-align: top;
 }
 
 .event-list article:hover,
@@ -1456,7 +1502,6 @@ body {
 }
 
 .event-list article strong {
-	position: absolute;
 	display: block;
 	margin-top: 20px;
 }

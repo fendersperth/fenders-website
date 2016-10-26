@@ -12,6 +12,24 @@ footer {
 
     .logo {
         float: left;
+        display: block;
+        fill: #9c87c0;
+        width: calc(145px * 0.75);
+        height: calc(32px * 0.75);
+        background: url('../img/logo-mono.svg');
+        opacity: 0.5;
+        margin-right: 20px;
+
+        span {
+            position: absolute;
+            width: 1px;
+            margin: -1px;
+            padding: 0;
+            overflow: hidden;
+            height: 1px;
+            border: 0;
+            clip: rect(0 0 0 0);
+        }
     }
 
     nav {
@@ -25,8 +43,38 @@ footer {
     ul {
 
         li {
-            display: inline;
+            display: inline-block;
             margin: 0 10px;
+
+            a {
+                display: block;
+                color: #fff;
+                @include bold();
+                @include font-size(14);
+                transition: color 0.1s ease-in-out;
+
+                &:hover,
+                &:active {
+                    opacity: 0.8;
+                }
+
+                span {
+                    position: absolute;
+                    width: 1px;
+                    margin: -1px;
+                    padding: 0;
+                    overflow: hidden;
+                    height: 1px;
+                    border: 0;
+                    clip: rect(0 0 0 0);
+                }
+
+                &.twitter {
+                    width: 30px;
+                    height: 23px;
+                    background: url('../img/twitter.svg');
+                }
+            }
         }
     }
 }
