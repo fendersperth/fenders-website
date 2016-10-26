@@ -43,6 +43,11 @@ header {
 
     @include breakpoint(0, 500px) {
 
+        .logo {
+            width: calc(200px * 0.6);
+            height: calc(58px * 0.6);
+        }
+
         ul {
 
             li {
@@ -51,6 +56,10 @@ header {
                     display: none;
                 }
             }
+        }
+
+        .btn {
+            margin: 0 5px;
         }
     }
 }

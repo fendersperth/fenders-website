@@ -1,5 +1,5 @@
 .event-list {
-    margin-top: 90px;
+    margin-top: 95px;
 
     .wrapper {
         @include clearfix();
@@ -23,7 +23,7 @@
         &:focus,
         &.past {
             border: 1px solid lighten(#604b86, 5%);
-            background: lighten(#604b86, 5%);
+            background: lighten(#604b86, 15%);
         }
 
         &.active {
@@ -44,10 +44,11 @@
 
         .month {
             position: absolute;
+            opacity: 0.8;
             top: -30px;
             lefT: 0;
             color: #fff;
-            @include bold();
+            @include semibold();
             @include font-size(13);
         }
 
@@ -99,6 +100,7 @@
     }
 
     @include breakpoint(0, 444px) {
+        margin-top: 55px;
 
         article {
             width: 80%;
