@@ -1316,6 +1316,10 @@ body {
 	background: #fff;
 }
 
+.home .join.loading .loader {
+	margin: 0 auto;
+}
+
 .home .join legend {
 	font-size: 26px;
 	font-size: 2.6rem;
@@ -1323,7 +1327,7 @@ body {
 	margin-bottom: 40px;
 }
 
-.home .join legend span {
+.home .join legend span.legend-note {
 	color: #fc5b7d;
 }
 

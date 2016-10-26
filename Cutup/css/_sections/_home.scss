@@ -85,18 +85,23 @@
 }
 
 .home .join {
+    
     padding: 60px 70px 45px;
     margin: 100px auto 0;
     border-radius: 5px;
     max-width: 700px;
     background: #fff;
 
+    &.loading .loader {
+        margin: 0 auto;
+    }
+
     legend {
         @include font-size(26);
         text-align: center;
         margin-bottom: 40px;
 
-        span {
+        span.legend-note {
             color: #fc5b7d;
         }
     }
