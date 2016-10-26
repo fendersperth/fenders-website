@@ -30,6 +30,11 @@ footer {
             border: 0;
             clip: rect(0 0 0 0);
         }
+        
+        &:hover,
+        &:active {
+            opacity: 0.7;
+        }
     }
 
     nav {

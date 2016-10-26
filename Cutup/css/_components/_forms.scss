@@ -251,7 +251,7 @@ form {
 
 	// error styles for error message
 	div.validation-error {
-		@include font-size(18);
+		@include font-size(14);
 		line-height: 1.4;
 		display: block;
 		margin-bottom: 40px;
