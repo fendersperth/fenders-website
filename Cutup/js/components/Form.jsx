@@ -70,7 +70,7 @@ export default React.createClass({
 		const validation = validateEmail(email);
 		if (!validation.result) { 
 			this.setState({ 
-				emailError : "Sorry, looks like you've entered an inccorectly formated email... do you mind fixing it up?" 
+				emailError : "Sorry, looks like you've entered an incorrectly formated email... do you mind fixing it up?" 
 			});
 		} else {
 			this.setState({ emailError: false });
