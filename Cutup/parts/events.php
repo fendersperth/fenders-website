@@ -19,36 +19,36 @@
         </article> */ ?>
 
         <article class="active">
-            <span class="month">October</span>
-            <a href="http://mixinconf.com/collide/" title="Collide">
-                <span class="tag talk icon">Talk</span>
-                <strong>Collide: Hosted by Mixin</strong>
-                <span class="date">Wednesday, October 26</span>
+            <span class="month">April</span>
+            <a href="https://www.meetup.com/Front-End-Web-Developers-Perth/events/237821440/" title="Women in Web GSD Day">
+                <span class="tag hack icon">Hack Day</span>
+                <strong>Women in Web GSD Day</strong>
+                <span class="date">Saturday, April 8</span>
             </a>
         </article>
 
         <article>
-            <a href="http://mixinconf.com/" title="Mixin">
-                <span class="tag talk icon">Talk</span>
-                <strong>Mixin</strong>
-                <span class="date">Friday, October 28</span>
-            </a>
-        </article>
-
-        <article>
-            <span class="month">November</span>
-            <a href="https://www.meetup.com/Front-End-Web-Developers-Perth/events/233608984/" title="Casual Catchup">
+            <a href="https://www.meetup.com/Front-End-Web-Developers-Perth/events/236988066/" title="Casual Catchup">
                 <span class="tag social icon">Social</span>
                 <strong>Casual Catchup</strong>
-                <span class="date">Wednesday, November 9</span>
+                <span class="date">Wednesday, April 12</span>
+            </a>
+        </article>
+        
+        <article>
+            <span class="month">May</span>
+            <a href="https://www.meetup.com/Front-End-Web-Developers-Perth/events/236988067/" title="Casual Catchup">
+                <span class="tag social icon">Social</span>
+                <strong>Casual Catchup</strong>
+                <span class="date">Wednesday, May 10</span>
             </a>
         </article>
 
-        <article>
-            <a href="https://www.meetup.com/Front-End-Web-Developers-Perth/events/230870644/" title="">
-                <span class="tag talk icon">Talk</span>
-                <strong>Javascript Frameworks</strong>
-                <span class="date">Wednesday, November 23</span>
+        <article>            
+            <a href="https://www.meetup.com/Front-End-Web-Developers-Perth/events/236961222/" title="Sketch Workshop">
+                <span class="tag workshop icon">Workshop</span>
+                <strong>Sketch Workshop</strong>
+                <span class="date">Saturday, May 20</span>
             </a>
         </article>
 
