@@ -1,7 +1,7 @@
 <div id="join-form">
 	<form class="join clearfix" action="" method="post">
 
-		<legend>Join the convo with <span>445</span> other Fenders on Slack!</legend>
+		<legend>Join the convo with <span>440+</span> other Fenders on Slack!</legend>
 
 		<label>
 			<span class="hidden">Your Name</span>
