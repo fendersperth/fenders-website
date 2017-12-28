@@ -1201,7 +1201,8 @@ footer ul li a {
 
 footer ul li a:hover,
 footer ul li a:active {
-	opacity: 0.8;
+	text-decoration: underline;
+	color: #fff;
 }
 
 footer ul li a span {

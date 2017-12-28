@@ -3,13 +3,13 @@
 
         <a class="logo" href="" title="Fenders"><span>Fenders</span></a>
 
-        <?php /* <nav>
+        <nav>
             <ul>
-                <li><a href="" title="Submit an event">Submit an event</a></li>
+                <li><a href="" title="Submit a talk">Submit a talk</a></li>
                 <li><a href="" title="Sponsorship">Sponsorship</a></li>
                 <li><a href="" title="Email us">Email us</a></li>
             </ul>
-        </nav> */ ?>
+        </nav>
 
         <nav class="social">
             <ul>
