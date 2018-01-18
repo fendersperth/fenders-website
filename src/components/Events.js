@@ -5,7 +5,7 @@ export const Events = () => (
 
         <div className="wrapper">
 
-            <article>
+            <article  className="active">
                 <a href="https://www.meetup.com/Front-End-Web-Developers-Perth/events/245870684/" title="Fenders January">
                     <span className="tag talk icon">Talks</span>
                     <strong>Fenders January Presentations</strong>
@@ -22,7 +22,7 @@ export const Events = () => (
                 </a>
             </article>
 
-            <article className="active">
+            <article>
                 <a href="https://www.meetup.com/Front-End-Web-Developers-Perth/events/qqvhjkyxdbsb/" title="Casual Catchup">
                     <span className="tag social icon">Social</span>
                     <strong>Casual Catchup</strong>
