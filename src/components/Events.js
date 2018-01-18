@@ -4,19 +4,11 @@ export const Events = () => (
     <section className="event-list clearfix">
 
         <div className="wrapper">
-            <article className="active">
-                <span className="month">January</span>
-                <a href="https://www.meetup.com/Front-End-Web-Developers-Perth/events/qqvhjkyxcbnb/" title="Casual Catchup">
-                    <span className="tag social icon">Social</span>
-                    <strong>Casual Catchup</strong>
-                    <span className="date">Wednesday, January 10</span>
-                </a>
-            </article>
 
             <article>
                 <a href="https://www.meetup.com/Front-End-Web-Developers-Perth/events/245870684/" title="Fenders January">
                     <span className="tag talk icon">Talks</span>
-                    <strong>Fenders Presentation</strong>
+                    <strong>Fenders January Presentations</strong>
                     <span className="date">Thursday, January 18</span>
                 </a>
             </article>
@@ -30,6 +22,13 @@ export const Events = () => (
                 </a>
             </article>
 
+            <article className="active">
+                <a href="https://www.meetup.com/Front-End-Web-Developers-Perth/events/qqvhjkyxdbsb/" title="Casual Catchup">
+                    <span className="tag social icon">Social</span>
+                    <strong>Casual Catchup</strong>
+                    <span className="date">Wednesday, February 14</span>
+                </a>
+            </article>
         </div>
     </section>
 
