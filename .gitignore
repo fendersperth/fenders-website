@@ -55,3 +55,7 @@ GeoIPv6.dat
 /Cutup/js/min**/*
 /Cutup/slack_keys.php
 /getChannels.py
+
+# Gatsby noise
+.cache
+public/render-page.js.map
