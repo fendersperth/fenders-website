@@ -1062,6 +1062,12 @@ footer ul li a.twitter {
 	background: url("../img/twitter.svg");
 }
 
+footer ul li a.slack {
+	width: 30px;
+	height: 26px;
+	background: url("../img/slack.svg");
+}
+
 *,
 *:before,
 *:after {
