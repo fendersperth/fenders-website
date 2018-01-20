@@ -3,6 +3,7 @@ import React from "react"
 import { Header } from '../components/Header'
 import { Footer } from '../components/Footer'
 import { Events } from '../components/Events'
+import '../assets/css/fenders-styles.css'
 
 export default () => (
         <div className="page-container">

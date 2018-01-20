@@ -556,7 +556,7 @@ a:focus {
 @font-face {
 	font-family: "Icons";
 	src: url("../fonts/Icons.eot");
-	src: url("../fonts/Icons.eot?#iefix") format("eot"), url("../fonts/Icons.woff") format("woff"), url("../fonts/Icons.ttf") format("truetype"), url("../fonts/Icons.svg#Icons") format("svg");
+	src: url("../fonts/Icons.eot?#iefix") format("eot"), url("../fonts/Icons.woff") format("woff"), url("../fonts/Icons.ttf") format("truetype");
 }
 
 .icon:before {

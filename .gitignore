@@ -37,6 +37,7 @@ GeoIPv6.dat
 *node_modules/
 */node_modules/
 */bower_components/
+yarn-error.log
 
 # IDEs
 *.idea/
@@ -56,6 +57,6 @@ GeoIPv6.dat
 /Cutup/slack_keys.php
 /getChannels.py
 
-# Gatsby noise
-.cache
-public/render-page.js.map
+# Ignore Gatsby cache and compiled files
+.cache/
+public/
