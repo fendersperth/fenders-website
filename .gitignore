@@ -34,9 +34,8 @@ GeoIP.dat
 GeoIPv6.dat
 
 # node_modules & Bower
-*node_modules/
-*/node_modules/
-*/bower_components/
+node_modules/
+bower_components/
 
 # IDEs
 *.idea/
@@ -55,3 +54,7 @@ GeoIPv6.dat
 /Cutup/js/min**/*
 /Cutup/slack_keys.php
 /getChannels.py
+
+# Ignore Gatsby cache and compiled files
+.cache/
+public/
