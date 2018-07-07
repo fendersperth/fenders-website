@@ -1027,7 +1027,7 @@ footer nav.social {
 
 footer ul li {
 	display: inline-block;
-	margin: 0 10px;
+	margin: 0 5px;
 }
 
 footer ul li a {
@@ -1057,15 +1057,15 @@ footer ul li a span {
 }
 
 footer ul li a.twitter {
-	width: 30px;
-	height: 23px;
-	background: url("../img/twitter.svg");
+	width: 26px;
+	height: 26px;
+	background: url("../img/twitter.svg") no-repeat;
 }
 
 footer ul li a.slack {
-	width: 30px;
+	width: 28px;
 	height: 26px;
-	background: url("../img/slack.svg");
+	background: url("../img/slack.svg") no-repeat;
 }
 
 *,
