@@ -5,38 +5,33 @@ export const Events = () => (
     <section className="event-list clearfix">
         <div className="wrapper">
             <article className="active">
-                <Link
-                    to="https://www.meetup.com/Front-End-Web-Developers-Perth/events/245870684/"
-                    aria-labelledby="event-01"
-                >
-                    <span className="tag talk icon">Talks</span>
-                    <strong id="event-01">Fenders January Presentations</strong>
-                    <span className="date">Thursday, January 18</span>
-                </Link>
-            </article>
-
-            <article>
-                <span className="month">February</span>
-                <Link
-                    to="https://www.meetup.com/Front-End-Web-Developers-Perth/events/246257106//"
-                    aria-labelledby="event-02"
-                >
-                    <span className="tag workshop icon">Workshop</span>
-                    <strong id="event-02">Global Diversity CFP Day</strong>
-                    <span className="date">Saturday, February 3</span>
-                </Link>
-            </article>
-
-            <article>
-                <Link
-                    to="https://www.meetup.com/Front-End-Web-Developers-Perth/events/qqvhjkyxdbsb/"
-                    aria-labelledby="event-03"
-                >
+                <span className="month">August</span>
+                <a href="https://www.meetup.com/en-AU/Front-End-Web-Developers-Perth/events/qqvhjkyxlblb/" title="August Casual Catchup">
                     <span className="tag social icon">Social</span>
-                    <strong id="event-03">Casual Catchup</strong>
-                    <span className="date">Wednesday, February 14</span>
-                </Link>
+                    <strong>Casual Catchup</strong>
+                    <span className="date">Wednesday, August 8</span>
+                </a>
+            </article>
+
+            <article>
+                <span className="tag talk icon">Talks</span>
+                <strong>Fenders Birthday - Lightning Talks</strong>
+                <span className="date">TBA</span>
+            </article>
+
+            <article>
+                <span className="month">September</span>
+                <a href="https://www.meetup.com/en-AU/Front-End-Web-Developers-Perth/events/qqvhjkyxmbqb/" title="September Casual Catchup">
+                    <span className="tag social icon">Social</span>
+                    <strong>Casual Catchup</strong>
+                    <span className="date">Wednesday, September 12</span>
+                </a>
             </article>
         </div>
     </section>
 )
+
+// Event Types
+// - Workshop (workshop)
+// - Social (social)
+// - Talks (talk)
