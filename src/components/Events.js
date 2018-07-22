@@ -1,10 +1,9 @@
-import React from "react"
+import React from 'react'
+import { Link } from 'gatsby'
 
 export const Events = () => (
     <section className="event-list clearfix">
-
         <div className="wrapper">
-
             <article className="active">
                 <span className="month">August</span>
                 <a href="https://www.meetup.com/en-AU/Front-End-Web-Developers-Perth/events/qqvhjkyxlblb/" title="August Casual Catchup">
@@ -30,7 +29,6 @@ export const Events = () => (
             </article>
         </div>
     </section>
-
 )
 
 // Event Types
