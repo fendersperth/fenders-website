@@ -16,7 +16,7 @@ Get in touch with one of the organisers to get access to the repository :smiley:
 2. Submit a PR to merge your `feature-branch` into `dev`, and get someone from `fendersperth/fenders-website` to approve it (add them to the review and they'll get a notification)
 3. Once someone has approved the request, merge it into `dev` :+1:
 4. When you've merged it, someone from `fendersperth/fenders-website` will submit a PR to merge from `dev` into `master`
-5. One of the organisers will then approve the request to merge into `master` and deploy the site, pending whether status checks pass :tada:
+5. Someone else from `fendersperth/fenders-website` or one of the organisers will then approve the request to merge into `master` and deploy the site, pending whether status checks pass :tada:
 
 ## Getting approval access
 Want to help us on the website? We'd love you to help!
