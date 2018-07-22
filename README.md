@@ -3,7 +3,7 @@
 
 ## TODO
 - Setup components
-- Convert CSS to Glamorous or Styled Components
+- Convert CSS to Emotion or Styled Components
 - Pull Meetup events in from Meetup.com
 
 ## Running in development

@@ -1378,6 +1378,7 @@ body {
 }
 
 .event-list article {
+	color: #fff;
 	text-align: left;
 	position: relative;
 	display: inline-block;

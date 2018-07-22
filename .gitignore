@@ -55,6 +55,9 @@ bower_components/
 /Cutup/slack_keys.php
 /getChannels.py
 
+# Lock Files
+package-lock.json
+
 # Ignore Gatsby cache and compiled files
 .cache/
 public/
