@@ -1,37 +1,50 @@
 import React from 'react'
-import { Link } from 'gatsby'
+import { StaticQuery, graphql } from 'gatsby'
+import EventCard from './EventCard'
 
-export const Events = () => (
-    <section className="event-list clearfix">
-        <div className="wrapper">
-            <article className="active">
-                <span className="month">August</span>
-                <a href="https://www.meetup.com/en-AU/Front-End-Web-Developers-Perth/events/qqvhjkyxlblb/" title="August Casual Catchup">
-                    <span className="tag social icon">Social</span>
-                    <strong>Casual Catchup</strong>
-                    <span className="date">Wednesday, August 8</span>
-                </a>
-            </article>
+const Events = () => (
+    <StaticQuery
+        query={graphql`
+            query EventsQuery {
+                eventList: dataJson {
+                    events {
+                        active
+                        type
+                        title
+                        date(formatString: "dddd, MMMM D")
+                        month: date(formatString: "MMMM")
+                        url
+                    }
+                }
+            }
+        `}
+        render={data => {
+            const usedMonths = []
 
-            <article>
-                <span className="tag talk icon">Talks</span>
-                <strong>Fenders Birthday - Lightning Talks</strong>
-                <span className="date">TBA</span>
-            </article>
+            return (
+                <section className="event-list clearfix">
+                    <div className="wrapper">
+                        {data.eventList.events.map((event, i) => {
+                            let month
+                            if (!usedMonths.includes(event.month)) {
+                                month = event.month
+                                usedMonths.push(event.month)
+                            }
 
-            <article>
-                <span className="month">September</span>
-                <a href="https://www.meetup.com/en-AU/Front-End-Web-Developers-Perth/events/qqvhjkyxmbqb/" title="September Casual Catchup">
-                    <span className="tag social icon">Social</span>
-                    <strong>Casual Catchup</strong>
-                    <span className="date">Wednesday, September 12</span>
-                </a>
-            </article>
-        </div>
-    </section>
+                            return (
+                                <EventCard {...event} key={i} month={month} />
+                            )
+                        })}
+                    </div>
+                </section>
+            )
+        }}
+    />
 )
 
 // Event Types
 // - Workshop (workshop)
 // - Social (social)
 // - Talks (talk)
+
+export default Events

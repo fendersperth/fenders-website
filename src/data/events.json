@@ -1,0 +1,21 @@
+{
+	"events": [
+		{
+			"type": "social",
+			"title": "Casual Catchup",
+			"date": "2018-08-08T10:00:00.000Z",
+			"url": "https://www.meetup.com/en-AU/Front-End-Web-Developers-Perth/events/qqvhjkyxlblb/",
+			"active": true
+		},
+		{
+			"type": "talk",
+			"title": "Fenders Birthday - Lightning Talks"
+		},
+		{
+			"type": "social",
+			"title": "Casual Catchup",
+			"date": "2018-09-12T10:00:00.000Z",
+			"url": "https://www.meetup.com/en-AU/Front-End-Web-Developers-Perth/events/qqvhjkyxmbqb/"
+		}
+	]
+}
