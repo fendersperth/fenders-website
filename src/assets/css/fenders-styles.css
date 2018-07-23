@@ -1387,17 +1387,18 @@ body {
 }
 
 .event-list article {
-    text-align: left;
-    position: relative;
-    display: inline-block;
-    width: 200px;
-    height: 190px;
-    padding: 15px 15px 30px;
-    border-radius: 5px;
-    margin: 0 10px 50px 10px;
-    border: 1px solid #866fae;
-    transition: background 0.4s ease-in-out;
-    vertical-align: top;
+	color: #fff;
+	text-align: left;
+	position: relative;
+	display: inline-block;
+	width: 200px;
+	height: 190px;
+	padding: 15px 15px 30px;
+	border-radius: 5px;
+	margin: 0 10px 50px 10px;
+	border: 1px solid #866fae;
+	transition: background 0.4s ease-in-out;
+	vertical-align: top;
 }
 
 .event-list article:hover,
