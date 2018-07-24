@@ -1,6 +1,7 @@
 {
 	"events": [
 		{
+			"id": "243191810",
 			"type": "social",
 			"title": "Casual Catchup",
 			"date": "2018-08-08T10:00:00.000Z",
@@ -8,10 +9,12 @@
 			"active": true
 		},
 		{
+			"id": "h4ppyb1rthday",
 			"type": "talk",
 			"title": "Fenders Birthday - Lightning Talks"
 		},
 		{
+			"id": "qqvhjkyxmbqb",
 			"type": "social",
 			"title": "Casual Catchup",
 			"date": "2018-09-12T10:00:00.000Z",

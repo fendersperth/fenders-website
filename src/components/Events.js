@@ -8,6 +8,7 @@ const Events = () => (
             query EventsQuery {
                 eventList: dataJson {
                     events {
+                        id
                         active
                         type
                         title
@@ -24,7 +25,7 @@ const Events = () => (
             return (
                 <section className="event-list clearfix">
                     <div className="wrapper">
-                        {data.eventList.events.map((event, i) => {
+                        {data.eventList.events.map(event => {
                             let month
                             if (!usedMonths.includes(event.month)) {
                                 month = event.month
@@ -32,7 +33,11 @@ const Events = () => (
                             }
 
                             return (
-                                <EventCard {...event} key={i} month={month} />
+                                <EventCard
+                                    {...event}
+                                    key={event.id}
+                                    month={month}
+                                />
                             )
                         })}
                     </div>
@@ -41,10 +46,5 @@ const Events = () => (
         }}
     />
 )
-
-// Event Types
-// - Workshop (workshop)
-// - Social (social)
-// - Talks (talk)
 
 export default Events

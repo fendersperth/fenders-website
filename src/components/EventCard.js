@@ -21,7 +21,7 @@ const EventCard = ({ active, month, url, type, title, date }) => {
 }
 
 EventCard.propTypes = {
-    type: PropTypes.oneOf(['social', 'workshop', 'talk']),
+    type: PropTypes.oneOf(['social', 'workshop', 'talk']).isRequired,
     title: PropTypes.string.isRequired,
     date: PropTypes.string,
     url: PropTypes.string,
