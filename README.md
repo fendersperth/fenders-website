@@ -2,7 +2,7 @@
 - The Fenders Perth Meetup website.
 
 ## TODO
-- [ ] Setup components
+- [x] Setup components
 - [ ] Convert CSS to Emotion or Styled Components
 - [ ] Pull Meetup events in from Meetup.com
 
@@ -20,4 +20,4 @@ Get in touch with one of the organisers to get access to the repository :smiley:
 
 ## Getting approval access
 Want to help us on the website? We'd love you to help!
-Contact one of the Fenders Organisers and we can discuss adding you as a maintainer on the website 
+Contact one of the Fenders Organisers and we can discuss adding you as a maintainer on the website
