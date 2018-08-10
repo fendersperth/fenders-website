@@ -1,12 +1,15 @@
 import React, { Fragment } from 'react'
 import PropTypes from 'prop-types'
 
-const EventCard = ({ active, month, url, type, title, date }) => {
+const EventCard = ({ active, month, url, title, date }) => {
+    const icons = ['social', 'workshop', 'talk']
+    const iconClass = icons[Math.floor(Math.random() * icons.length)]
+
     const cardContent = (
         <Fragment>
-            <span
-                className={`tag ${type.toLowerCase()} icon`}
-            >{`${type[0].toUpperCase()}${type.substr(1)}`}</span>
+            <span className={`tag ${iconClass} icon`} aria-hidden>
+                &nbsp;
+            </span>
             <strong>{title}</strong>
             <span className="date">{date || 'TBA'}</span>
         </Fragment>
@@ -21,7 +24,6 @@ const EventCard = ({ active, month, url, type, title, date }) => {
 }
 
 EventCard.propTypes = {
-    type: PropTypes.oneOf(['social', 'workshop', 'talk']).isRequired,
     title: PropTypes.string.isRequired,
     date: PropTypes.string,
     url: PropTypes.string,

@@ -2,13 +2,10 @@
 - The Fenders Perth Meetup website.
 
 ## TODO
-- [x] Setup components
 - [ ] Convert CSS to Emotion or Styled Components
-- [ ] Pull Meetup events in from Meetup.com
 
 ## Running in development
-`gatsby develop`
-
+`MEETUP_API={API KEY} gatsby develop`
 
 ## Git Workflow
 Get in touch with one of the organisers to get access to the repository :smiley:

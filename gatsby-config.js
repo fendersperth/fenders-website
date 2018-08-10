@@ -4,11 +4,12 @@ module.exports = {
     },
     plugins: [
         'gatsby-plugin-react-helmet',
-        'gatsby-transformer-json',
         {
-            resolve: 'gatsby-source-filesystem',
+            resolve: 'gatsby-source-meetup',
             options: {
-                path: './src/data',
+                apiURL: `https://api.meetup.com/Front-End-Web-Developers-Perth/events?key=${
+                    process.env.MEETUP_API
+                }`,
             },
         },
     ],
