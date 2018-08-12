@@ -21,6 +21,19 @@ const Events = () => (
         `}
         render={data => {
             const usedMonths = []
+            const determineType = name => {
+                name = name.toLowerCase()
+
+                if (name.includes('casual catchup')) {
+                    return 'social'
+                }
+
+                if (name.includes('workshop')) {
+                    return 'workshop'
+                }
+
+                return 'talk'
+            }
 
             return (
                 <section className="event-list clearfix">
@@ -39,6 +52,7 @@ const Events = () => (
                                     key={node.id}
                                     date={node.date}
                                     month={month}
+                                    type={determineType(node.name)}
                                 />
                             )
                         })}

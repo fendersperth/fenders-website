@@ -4,6 +4,16 @@
 ## TODO
 - [ ] Convert CSS to Emotion or Styled Components
 
+## Meetup events
+Events are pulled from the Meetup API using this endpoint:
+https://www.meetup.com/meetup_api/docs/:urlname/events/#list
+
+### Required
+:urlname = Front-End-Web-Developers-Perth
+
+This means supplying an env variable `MEETUP_API` in dev and prod.
+Meetup API Key: https://secure.meetup.com/meetup_api/key/
+
 ## Running in development
 `MEETUP_API={API KEY} gatsby develop`
 
