@@ -6,37 +6,53 @@ const Events = () => (
     <StaticQuery
         query={graphql`
             query EventsQuery {
-                eventList: dataJson {
-                    events {
-                        id
-                        active
-                        type
-                        title
-                        date(formatString: "dddd, MMMM D")
-                        month: date(formatString: "MMMM")
-                        url
+                allEvent(limit: 3) {
+                    edges {
+                        node {
+                            id
+                            name
+                            link
+                            date: local_date(formatString: "dddd, MMMM D")
+                            month: local_date(formatString: "MMMM")
+                        }
                     }
                 }
             }
         `}
         render={data => {
             const usedMonths = []
+            const determineType = name => {
+                name = name.toLowerCase()
+
+                if (name.includes('casual catchup')) {
+                    return 'social'
+                }
+
+                if (name.includes('workshop')) {
+                    return 'workshop'
+                }
+
+                return 'talk'
+            }
 
             return (
                 <section className="event-list clearfix">
                     <div className="wrapper">
-                        {data.eventList.events.map(event => {
+                        {data.allEvent.edges.map(({ node }, idx) => {
                             let month
-                            if (!usedMonths.includes(event.month)) {
-                                month = event.month
-                                usedMonths.push(event.month)
+                            if (!usedMonths.includes(node.month)) {
+                                month = node.month
+                                usedMonths.push(node.month)
                             }
-
                             return (
                                 <EventCard
-                                    {...event}
-                                    key={event.id}
+                                    active={idx === 0}
+                                    url={node.link}
+                                    title={node.name}
+                                    key={node.id}
+                                    date={node.date}
                                     month={month}
+                                    type={determineType(node.name)}
                                 />
                             )
                         })}

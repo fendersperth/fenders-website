@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react'
 import PropTypes from 'prop-types'
 
-const EventCard = ({ active, month, url, type, title, date }) => {
+const EventCard = ({ active, month, url, title, date, type }) => {
     const cardContent = (
         <Fragment>
             <span
