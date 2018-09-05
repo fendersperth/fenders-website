@@ -1,37 +1,66 @@
 import React from 'react'
-import { Link } from 'gatsby'
+import { StaticQuery, graphql } from 'gatsby'
+import EventCard from './EventCard'
 
-export const Events = () => (
-    <section className="event-list clearfix">
-        <div className="wrapper">
-            <article className="active">
-                <span className="month">August</span>
-                <a href="https://www.meetup.com/en-AU/Front-End-Web-Developers-Perth/events/qqvhjkyxlblb/" title="August Casual Catchup">
-                    <span className="tag social icon">Social</span>
-                    <strong>Casual Catchup</strong>
-                    <span className="date">Wednesday, August 8</span>
-                </a>
-            </article>
+const Events = () => (
+    <StaticQuery
+        query={graphql`
+            query EventsQuery {
+                allEvent(limit: 3) {
+                    edges {
+                        node {
+                            id
+                            name
+                            link
+                            date: local_date(formatString: "dddd, MMMM D")
+                            month: local_date(formatString: "MMMM")
+                        }
+                    }
+                }
+            }
+        `}
+        render={data => {
+            const usedMonths = []
+            const determineType = name => {
+                name = name.toLowerCase()
 
-            <article>
-                <span className="tag talk icon">Talks</span>
-                <strong>Fenders Birthday - Lightning Talks</strong>
-                <span className="date">TBA</span>
-            </article>
+                if (name.includes('casual catchup')) {
+                    return 'social'
+                }
 
-            <article>
-                <span className="month">September</span>
-                <a href="https://www.meetup.com/en-AU/Front-End-Web-Developers-Perth/events/qqvhjkyxmbqb/" title="September Casual Catchup">
-                    <span className="tag social icon">Social</span>
-                    <strong>Casual Catchup</strong>
-                    <span className="date">Wednesday, September 12</span>
-                </a>
-            </article>
-        </div>
-    </section>
+                if (name.includes('workshop')) {
+                    return 'workshop'
+                }
+
+                return 'talk'
+            }
+
+            return (
+                <section className="event-list clearfix">
+                    <div className="wrapper">
+                        {data.allEvent.edges.map(({ node }, idx) => {
+                            let month
+                            if (!usedMonths.includes(node.month)) {
+                                month = node.month
+                                usedMonths.push(node.month)
+                            }
+                            return (
+                                <EventCard
+                                    active={idx === 0}
+                                    url={node.link}
+                                    title={node.name}
+                                    key={node.id}
+                                    date={node.date}
+                                    month={month}
+                                    type={determineType(node.name)}
+                                />
+                            )
+                        })}
+                    </div>
+                </section>
+            )
+        }}
+    />
 )
 
-// Event Types
-// - Workshop (workshop)
-// - Social (social)
-// - Talks (talk)
+export default Events

@@ -2,13 +2,20 @@
 - The Fenders Perth Meetup website.
 
 ## TODO
-- [ ] Setup components
 - [ ] Convert CSS to Emotion or Styled Components
-- [ ] Pull Meetup events in from Meetup.com
+
+## Meetup events
+Events are pulled from the Meetup API using this endpoint:
+https://www.meetup.com/meetup_api/docs/:urlname/events/#list
+
+### Required
+:urlname = Front-End-Web-Developers-Perth
+
+This means supplying an env variable `MEETUP_API` in dev and prod.
+Meetup API Key: https://secure.meetup.com/meetup_api/key/
 
 ## Running in development
-`gatsby develop`
-
+`MEETUP_API={API KEY} gatsby develop`
 
 ## Git Workflow
 Get in touch with one of the organisers to get access to the repository :smiley:
@@ -20,4 +27,4 @@ Get in touch with one of the organisers to get access to the repository :smiley:
 
 ## Getting approval access
 Want to help us on the website? We'd love you to help!
-Contact one of the Fenders Organisers and we can discuss adding you as a maintainer on the website 
+Contact one of the Fenders Organisers and we can discuss adding you as a maintainer on the website
