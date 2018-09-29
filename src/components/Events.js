@@ -1,6 +1,22 @@
 import React from 'react'
+import styled from 'react-emotion';
 import { StaticQuery, graphql } from 'gatsby'
 import EventCard from './EventCard'
+import { BREAKPOINTS } from '../variables';
+
+const determineType = name => {
+    name = name.toLowerCase()
+
+    if (name.includes('casual catchup')) {
+        return 'social'
+    }
+
+    if (name.includes('workshop')) {
+        return 'workshop'
+    }
+
+    return 'talk'
+}
 
 const Events = () => (
     <StaticQuery
@@ -21,23 +37,10 @@ const Events = () => (
         `}
         render={data => {
             const usedMonths = []
-            const determineType = name => {
-                name = name.toLowerCase()
-
-                if (name.includes('casual catchup')) {
-                    return 'social'
-                }
-
-                if (name.includes('workshop')) {
-                    return 'workshop'
-                }
-
-                return 'talk'
-            }
 
             return (
-                <section className="event-list clearfix">
-                    <div className="wrapper">
+                <EventsWrapper>
+                    <Content>
                         {data.allEvent.edges.map(({ node }, idx) => {
                             let month
                             if (!usedMonths.includes(node.month)) {
@@ -56,11 +59,45 @@ const Events = () => (
                                 />
                             )
                         })}
-                    </div>
-                </section>
+                    </Content>
+                </EventsWrapper>
             )
         }}
     />
 )
 
 export default Events
+
+// styles
+
+const EventsWrapper = styled.section`
+    label: events-wrapper;
+    margin: 95px 0;
+
+    @media (max-width: ${BREAKPOINTS.SMALL}) {
+        margin: 55px 0;
+    }
+`;
+
+const Content = styled.div`
+    label: events-content;
+    align-items: center;
+    display: grid;
+    grid-template-columns: auto;
+    grid-column-gap: 2rem;
+    grid-row-gap: 2rem;
+    max-width: 660px;
+    margin: 0 auto;
+    padding: 0 10%;
+
+    @media (min-width: ${BREAKPOINTS.SMALL}) {
+        grid-template-columns: auto auto;
+        grid-row-gap: 5rem;
+        padding: 0 2rem;
+    }
+
+    @media (min-width: ${BREAKPOINTS.MEDIUM}) {
+        grid-template-columns: auto auto auto;
+        padding: 0;
+    }
+`;
