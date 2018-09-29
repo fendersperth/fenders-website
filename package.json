@@ -3,7 +3,8 @@
   "description": "Fenders Website",
   "license": "MIT",
   "scripts": {
-    "develop": "gatsby develop",
+    "start": "gatsby develop",
+    "develop": "yarn start",
     "build": "gatsby build",
     "serve": "gatsby serve"
   },
@@ -11,12 +12,12 @@
     "axios": "^0.17.1",
     "babel-plugin-transform-runtime": "^6.23.0",
     "d.js": "^0.7.5",
-    "gatsby": "2.0.0-beta.54",
-    "gatsby-plugin-react-helmet": "3.0.0-beta.3",
+    "gatsby": "2.0.7",
+    "gatsby-plugin-react-helmet": "3.0.0",
     "makerule": "^1.0.5",
     "prop-types": "^15.6.2",
-    "react": "^16.4.1",
-    "react-dom": "^16.4.1",
+    "react": "^16.5.2",
+    "react-dom": "^16.5.2",
     "react-helmet": "^5.2.0",
     "superagent": "^3.8.2"
   }
