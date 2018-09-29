@@ -1,6 +1,7 @@
 export const BREAKPOINTS = {
   SMALL: '30rem', // 480px
   MEDIUM: '48rem', // 768px
+  LARGE: '68rem', // 1088px
 }
 
 export const COLOUR = {
