@@ -15,6 +15,14 @@ const getIconProp = (name, prop) => {
   if (icon != null && icon.hasOwnProperty(prop)) return icon[prop];
 }
 
+const Icon = ({ name }) => (
+  <IconWrapper name={name} />
+)
+
+export default Icon;
+
+// styles
+
 export const IconWrapper = styled.i`
   label: icon;
   display: inline-block;
@@ -30,9 +38,3 @@ export const IconWrapper = styled.i`
     font-style: normal;
   }
 `;
-
-const Icon = ({ name }) => (
-  <IconWrapper name={name} />
-)
-
-export default Icon;
