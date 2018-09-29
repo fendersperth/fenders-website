@@ -15,7 +15,7 @@ This means supplying an env variable `MEETUP_API` in dev and prod.
 Meetup API Key: https://secure.meetup.com/meetup_api/key/
 
 ## Running in development
-`MEETUP_API={API KEY} gatsby develop`
+`MEETUP_API={API KEY} yarn start`
 
 ## Git Workflow
 Get in touch with one of the organisers to get access to the repository :smiley:
