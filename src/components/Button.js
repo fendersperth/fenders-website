@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'react-emotion';
-import { COLOURS } from '../variables';
+import { COLOURS } from '../constants';
 
 const Button = ({ colour = 'purple', title, href, children }) => (
   <LinkButton href={href} title={title}>{children}</LinkButton>
@@ -55,6 +55,7 @@ const LinkButton = styled.a`
 
 export const NakedButton = styled(LinkButton)`
   background-color: transparent;
+  padding: 10px 15px;
 
   :hover,
   :focus {

@@ -1,7 +1,9 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
+import styled from 'react-emotion'
 import { StaticQuery, graphql, withPrefix } from 'gatsby'
+import { COLOURS } from '../constants';
 
 import Header from '../components/Header'
 import appleTouch from '../assets/img/apple-touch-icon.png'
@@ -51,12 +53,12 @@ const Layout = ({ children, data }) => (
                         rel="stylesheet"
                     />
                 </Helmet>
-                <div className="page-container">
-                    <div className="outer-container">
+                <PageContainer>
+                    <Wrapper>
                         <Header siteTitle={data.site.siteMetadata.title} />
                         {children}
-                    </div>
-                </div>
+                    </Wrapper>
+                </PageContainer>
             </>
         )}
     />
@@ -67,3 +69,14 @@ Layout.propTypes = {
 }
 
 export default Layout
+
+const PageContainer = styled.div`
+`;
+
+const Wrapper = styled.div`
+    max-width: 1800px;
+    margin: 0 auto;
+    width: 100%;
+    position: relative;
+    background: ${COLOURS.PURPLE_BG};
+`;

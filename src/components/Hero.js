@@ -1,11 +1,11 @@
 import React from 'react'
 import styled from 'react-emotion';
-import { BREAKPOINTS } from '../variables';
+import { BREAKPOINTS, COLOURS } from '../constants';
 
 const Hero = () => (
     <HeroWrapper>
         <HeroText>
-            Front End Developers &amp; Designers with <span>.class</span>
+            Front End Developers &amp; Designers with <Block>.class</Block>
         </HeroText>
     </HeroWrapper>
 )
@@ -48,13 +48,14 @@ const HeroText = styled.h2`
     @media (min-width: ${BREAKPOINTS.LARGE}) {
         font-size: 5.5rem;
     }
+`;
 
-    span {
-        display: inline-block;
-        border-radius: 5px;
-        border: 3px solid #e1e1e9;
-        background: #f7f7f9;
-        color: #fd597c;
-        padding: 0 10px;
-    }
+const Block = styled.span`
+    display: inline-block;
+    border-radius: 5px;
+    border: 3px solid ${COLOURS.GREY};
+    background: ${COLOURS.GREY_LIGHT};
+    color: ${COLOURS.RED};
+    font-style: normal;
+    padding: 0 10px;
 `;

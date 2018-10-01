@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'react-emotion';
 import PropTypes from 'prop-types'
-import { BREAKPOINTS, COLOURS } from '../variables';
+import { BREAKPOINTS, COLOURS } from '../constants';
 import Icon, { IconWrapper } from './Icon';
 
 const EventCard = ({ active = false, month, url, title, date, type }) => {

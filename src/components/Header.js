@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'react-emotion';
 import LogoImage from '../assets/img/logo.svg';
 import { NakedButton, OutlinedButton } from './Button';
-import { BREAKPOINTS } from '../variables';
+import { BREAKPOINTS } from '../constants';
 
 const Header = ({ siteTitle }) => (
     <HeaderWrapper role="banner">
@@ -42,6 +42,10 @@ const HeaderWrapper = styled.header`
 
     @media (min-width: ${BREAKPOINTS.MEDIUM}) {
         height: 160px;
+    }
+
+    ${OutlinedButton} {
+        margin-left: 20px;
     }
 `;
 

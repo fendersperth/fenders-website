@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'react-emotion';
 import { StaticQuery, graphql } from 'gatsby'
 import EventCard from './EventCard'
-import { BREAKPOINTS } from '../variables';
+import { BREAKPOINTS } from '../constants';
 
 const determineType = name => {
     name = name.toLowerCase()

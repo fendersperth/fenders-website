@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'react-emotion';
 import Icon, { IconWrapper } from './Icon';
-import { BREAKPOINTS } from '../variables';
+import { BREAKPOINTS } from '../constants';
 
 const CallToAction = ({ children }) => (
   <CTAWrapper>
