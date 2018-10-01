@@ -8,26 +8,26 @@ const Header = ({ siteTitle }) => (
     <HeaderWrapper role="banner">
         <Logo>
             <LogoLink href="/">
-                <SiteTitle>{siteTitle}</SiteTitle>
+                <span className="u-vis-hide">{siteTitle}</span>
             </LogoLink>
         </Logo>
         <Nav>
             <ul>
                 <li>
-                    <NakedButton
+                    <LoginButton
                         href="https://secure.meetup.com/login/?returnUri=https%3A%2F%2Fwww.meetup.com%2FFront-End-Web-Developers-Perth%2Fjoin%2F%3FeventId%3D%26a%3D%26gj%3D"
                         title="Login"
                     >
                         Login
-                    </NakedButton>
+                    </LoginButton>
                 </li>
                 <li>
-                    <OutlinedButton
+                    <JoinButton
                         href="https://secure.meetup.com/register/?urlkey=&eventId=&a=&number=&gj=&c=15909272&returnUri=https%3A%2F%2Fwww.meetup.com%2FFront-End-Web-Developers-Perth%2Fjoin%2F%3FeventId%3D%26a%3D%26gj%3D"
                         title="Join the Club!"
                     >
                         Join<span> the Club!</span>
-                    </OutlinedButton>
+                    </JoinButton>
                 </li>
             </ul>
         </Nav>
@@ -36,16 +36,26 @@ const Header = ({ siteTitle }) => (
 
 export default Header;
 
+const JoinButton = styled(OutlinedButton)`
+    margin-left: 20px;
+
+    span {
+        display: none;
+    
+        @media (min-width: ${BREAKPOINTS.SMALL}) {
+            display: inline;
+        }
+    }
+`
+
+const LoginButton = styled(NakedButton)``
+
 const HeaderWrapper = styled.header`
     display: flex;
     padding: 24px 35px;
 
     @media (min-width: ${BREAKPOINTS.MEDIUM}) {
         height: 160px;
-    }
-
-    ${OutlinedButton} {
-        margin-left: 20px;
     }
 `;
 
@@ -72,17 +82,6 @@ const LogoLink = styled.a`
         font-size: 16px;
         top: 80px;
     }
-`;
-
-const SiteTitle = styled.span`
-    position: absolute;
-    width: 1px;
-    margin: -1px;
-    padding: 0;
-    overflow: hidden;
-    height: 1px;
-    border: 0;
-    clip: rect(0 0 0 0);
 `;
 
 const Nav = styled.nav`
