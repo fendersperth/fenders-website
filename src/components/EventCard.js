@@ -1,19 +1,19 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import styled from 'react-emotion';
 import PropTypes from 'prop-types'
-import { BREAKPOINTS, COLOUR } from '../variables';
+import { BREAKPOINTS, COLOURS } from '../variables';
 import Icon, { IconWrapper } from './Icon';
 
 const EventCard = ({ active = false, month, url, title, date, type }) => {
     const cardContent = (
-        <Fragment>
+        <>
             <EventTag>
                 <Icon name={`${type.toLowerCase()}`} />
                 {type}
             </EventTag>
             <EventTitle>{title}</EventTitle>
             <EventDate>{date || 'TBA'}</EventDate>
-        </Fragment>
+        </>
     )
 
     return (
@@ -48,7 +48,7 @@ const EventCardWrapper = styled.article`
 	position: relative;
 	padding: 15px 15px 30px;
     background: ${p => {
-        if (p.isPast) return COLOUR.PURPLE_MEDIUM;
+        if (p.isPast) return COLOURS.PURPLE_MEDIUM;
         if (p.isActive) return '#fff';
 
         return 'none';
@@ -56,12 +56,12 @@ const EventCardWrapper = styled.article`
 	border-radius: 5px;
     border-style: solid;
     border-width: 1px;
-    border-color: ${COLOUR.PURPLE_LIGHT};
+    border-color: ${COLOURS.PURPLE_LIGHT};
     border-color: ${p => {
-        if (p.isPast) return COLOUR.PURPLE_LIGHT;
+        if (p.isPast) return COLOURS.PURPLE_LIGHT;
         if (p.isActive) return '#fff';
 
-        return `${COLOUR.PURPLE_LIGHT}`;
+        return `${COLOURS.PURPLE_LIGHT}`;
     }};
     min-height: 160px;
 	transition: background 0.4s ease-in-out;
@@ -69,7 +69,7 @@ const EventCardWrapper = styled.article`
     
     &:hover,
     &:focus {
-        border-color: ${p => p.isActive ? '#fff' : COLOUR.PURPLE_MEDIUM};
+        border-color: ${p => p.isActive ? '#fff' : COLOURS.PURPLE_MEDIUM};
         background: ${p => p.isActive ? '#fff' : '#866fae'};
     }
 
@@ -85,6 +85,7 @@ const EventCardWrapper = styled.article`
 const Month = styled.div`
     label: month-label;
     position: absolute;
+    display: none;
     opacity: 0.8;
     top: -30px;
     left: 0;
@@ -93,8 +94,8 @@ const Month = styled.div`
     font-size: 13px;
     font-size: 1.3rem;
 
-    @media (max-width: ${BREAKPOINTS.SMALL}) {
-        display: none;
+    @media (min-width: ${BREAKPOINTS.SMALL}) {
+        display: block;
     }
 `;
 

@@ -72,9 +72,9 @@ export default Events
 
 const EventsWrapper = styled.section`
     label: events-wrapper;
-    margin: 95px 0;
+    margin: 20px 0;
 
-    @media (max-width: ${BREAKPOINTS.SMALL}) {
+    @media (min-width: ${BREAKPOINTS.SMALL}) {
         margin: 55px 0;
     }
 `;
@@ -86,18 +86,19 @@ const Content = styled.div`
     grid-template-columns: auto;
     grid-column-gap: 2rem;
     grid-row-gap: 2rem;
-    max-width: 660px;
     margin: 0 auto;
     padding: 0 10%;
 
     @media (min-width: ${BREAKPOINTS.SMALL}) {
         grid-template-columns: auto auto;
         grid-row-gap: 5rem;
+        max-width: 480px;
         padding: 0 2rem;
     }
 
     @media (min-width: ${BREAKPOINTS.MEDIUM}) {
         grid-template-columns: auto auto auto;
+        max-width: 660px;
         padding: 0;
     }
 `;

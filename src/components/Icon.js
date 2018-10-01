@@ -4,10 +4,11 @@ import styled from 'react-emotion';
 // issue with escaped string sequences in js
 // https://github.com/styled-components/styled-components/issues/1285
 const Icons = [
-  { name: 'social', content: '\\e004', colour: '#ffcb20' },
+  { name: 'arrow', content: '\\e001', colour: '#fff' },
   { name: 'workshop', content: '\\e002', colour: '#01d08a' },
-  { name: 'talk', content: '\\e005', colour: '#fc5b7d' },
   { name: 'hack', content: '\\e003', colour: '#4990e2' },
+  { name: 'social', content: '\\e004', colour: '#ffcb20' },
+  { name: 'talk', content: '\\e005', colour: '#fc5b7d' },
 ]
 
 const getIconProp = (name, prop) => {

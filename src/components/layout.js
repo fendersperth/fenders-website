@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import { StaticQuery, graphql, withPrefix } from 'gatsby'
 
-import { Header } from '../components/Header'
+import Header from '../components/Header'
 import appleTouch from '../assets/img/apple-touch-icon.png'
 import fav32 from '../assets/img/favicon-32x32.png'
 import fav16 from '../assets/img/favicon-16x16.png'

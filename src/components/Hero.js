@@ -31,14 +31,15 @@ const HeroWrapper = styled.div`
 const HeroText = styled.h2`
     font-weight: 600;
     font-size: 2.2rem;
-    position: relative;
+    position: absolute;
+    left: 50%;
     top: 50%;
-    transform: translateY(-50%);
-    display: block;
+    transform: translate(-50%, -50%);
     color: #fff;
     text-align: center;
     max-width: 60%;
     margin: 0 auto;
+    width: 100%;
 
     @media (min-width: ${BREAKPOINTS.MEDIUM}) {
         font-size: 4rem;

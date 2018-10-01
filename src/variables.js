@@ -4,7 +4,9 @@ export const BREAKPOINTS = {
   LARGE: '68rem', // 1088px
 }
 
-export const COLOUR = {
+export const COLOURS = {
   PURPLE_LIGHT: '#866fae',
   PURPLE_MEDIUM: '#6c5496',
+  PURPLE_PRIMARY: '#785fa5',
 }
+
