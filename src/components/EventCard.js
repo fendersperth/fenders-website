@@ -17,12 +17,12 @@ const EventCard = ({ active = false, month, url, title, date, type }) => {
     )
 
     return (
-        <a href={url}>
+        <EventCardLink href={url}>
             <EventCardWrapper isActive={active}>
                 {month && <Month>{month}</Month>}
                 {cardContent}
             </EventCardWrapper>
-        </a>
+        </EventCardLink>
     )
 }
 
@@ -39,7 +39,9 @@ export default EventCard
 
 // styles
 
-const EventCardWrapper = styled.article`
+export const EventCardLink = styled.a``;
+
+export const EventCardWrapper = styled.article`
     label: event-card-wrapper;
     color: ${p => {
         if (p.isActive) return '#000';

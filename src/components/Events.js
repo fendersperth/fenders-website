@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'react-emotion';
 import { StaticQuery, graphql } from 'gatsby'
-import EventCard from './EventCard'
+import EventCard, { EventCardWrapper, EventCardLink } from './EventCard'
 import { BREAKPOINTS } from '../constants';
 
 const determineType = name => {
@@ -81,24 +81,32 @@ const EventsWrapper = styled.section`
 
 const Content = styled.div`
     label: events-content;
-    align-items: center;
-    display: grid;
-    grid-template-columns: auto;
-    grid-column-gap: 2rem;
-    grid-row-gap: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: center;
     margin: 0 auto;
     padding: 0 10%;
+    width: 100%;
+
+    ${EventCardLink} {
+        margin: 0 0 20px;
+        flex: 1;
+        
+        @media (min-width: ${BREAKPOINTS.SMALL}) {
+            flex: 0 0 200px;
+            margin: 0 10px 50px;
+        }
+    }
 
     @media (min-width: ${BREAKPOINTS.SMALL}) {
-        grid-template-columns: auto auto;
-        grid-row-gap: 5rem;
-        max-width: 480px;
-        padding: 0 2rem;
+        align-items: center;
+        flex-flow: row wrap;
+        max-width: 440px;
+        padding: 0;
     }
 
     @media (min-width: ${BREAKPOINTS.MEDIUM}) {
-        grid-template-columns: auto auto auto;
         max-width: 660px;
-        padding: 0;
     }
 `;
