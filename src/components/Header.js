@@ -66,7 +66,7 @@ const LogoLink = styled.a`
         left: 50%;
         transform: translate(-50%);
         font-size: 16px;
-        top: 75px;
+        top: 80px;
     }
 `;
 
