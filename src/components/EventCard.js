@@ -1,8 +1,8 @@
-import React from 'react';
-import styled from 'react-emotion';
+import React from 'react'
+import styled from 'react-emotion'
 import PropTypes from 'prop-types'
-import { BREAKPOINTS, COLOURS } from '../constants';
-import Icon, { IconWrapper } from './Icon';
+import { BREAKPOINTS, COLOURS } from '../constants'
+import Icon, { IconWrapper } from './Icon'
 
 const EventCard = ({ active = false, month, url, title, date, type }) => {
     const cardContent = (
@@ -39,31 +39,31 @@ export default EventCard
 
 // styles
 
-export const EventCardLink = styled.a``;
+export const EventCardLink = styled.a``
 
-export const EventCardWrapper = styled.article`
+const EventCardWrapper = styled.article`
     label: event-card-wrapper;
     color: ${p => {
-        if (p.isActive) return '#000';
-        return '#fff';
+        if (p.isActive) return '#000'
+        return '#fff'
     }};
 	position: relative;
 	padding: 15px 15px 30px;
     background: ${p => {
-        if (p.isPast) return COLOURS.PURPLE_MEDIUM;
-        if (p.isActive) return '#fff';
+        if (p.isPast) return COLOURS.PURPLE_MEDIUM
+        if (p.isActive) return '#fff'
 
-        return 'none';
+        return 'none'
     }};
 	border-radius: 5px;
     border-style: solid;
     border-width: 1px;
     border-color: ${COLOURS.PURPLE_LIGHT};
     border-color: ${p => {
-        if (p.isPast) return COLOURS.PURPLE_LIGHT;
-        if (p.isActive) return '#fff';
+        if (p.isPast) return COLOURS.PURPLE_LIGHT
+        if (p.isActive) return '#fff'
 
-        return `${COLOURS.PURPLE_LIGHT}`;
+        return `${COLOURS.PURPLE_LIGHT}`
     }};
     min-height: 160px;
 	transition: background 0.4s ease-in-out;
@@ -82,7 +82,7 @@ export const EventCardWrapper = styled.article`
     a {
         color: ${p => p.isActive ? '#000' : '#fff'};
     }
-`;
+`
 
 const Month = styled.div`
     label: month-label;
@@ -99,7 +99,7 @@ const Month = styled.div`
     @media (min-width: ${BREAKPOINTS.SMALL}) {
         display: block;
     }
-`;
+`
 
 const EventTag = styled.div`
     label: event-tag;
@@ -112,13 +112,13 @@ const EventTag = styled.div`
     ${IconWrapper} {
         margin-right: 6px;
     }
-`;
+`
 
 const EventTitle = styled.div`
     font-weight: 700;
     margin-top: 15px;
     line-height: 1.2;
-`;
+`
 
 const EventDate = styled.div`
     position: absolute;
@@ -126,4 +126,4 @@ const EventDate = styled.div`
     opacity: 0.7;
     font-size: 13px;
     font-size: 1.3rem;
-`;
+`

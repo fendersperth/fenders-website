@@ -109,7 +109,7 @@ const Nav = styled.nav`
         text-decoration: underline;
         color: #fff;
     }
-`;
+`
 
 const FooterNav = styled(Nav)`
     flex: 1;
@@ -123,7 +123,7 @@ const LogoLink = styled.a`
     :active {
         opacity: 0.7;
     }
-`;
+`
 
 const FooterLogo = styled(LogoLink)`
     margin-bottom: 2rem;
@@ -137,7 +137,7 @@ const FooterLogo = styled(LogoLink)`
     @media (min-width: ${BREAKPOINTS.SMALL}) {
         margin-bottom: 0;
     }
-`;
+`
 
 const SocialNav = styled(Nav)`
     margin-top: 2rem;
@@ -145,13 +145,13 @@ const SocialNav = styled(Nav)`
     @media (min-width: ${BREAKPOINTS.SMALL}) {
         margin-top: 0;
     }
-`;
+`
 
 const TwitterLink = styled(LogoLink)`
     width: 26px;
     height: 26px;
     background: url(${TwitterLogo}) no-repeat;
-`;
+`
 
 const SlackLink = styled(LogoLink)`
     width: 28px;

@@ -1,5 +1,5 @@
 import React from 'react'
-import styled from 'react-emotion';
+import styled from 'react-emotion'
 
 // issue with escaped string sequences in js
 // https://github.com/styled-components/styled-components/issues/1285
@@ -12,15 +12,15 @@ const Icons = [
 ]
 
 const getIconProp = (name, prop) => {
-  const icon = Icons.find(x => x.name === name);
-  if (icon != null && icon.hasOwnProperty(prop)) return icon[prop];
+  const icon = Icons.find(x => x.name === name)
+  if (icon != null && icon.hasOwnProperty(prop)) return icon[prop]
 }
 
 const Icon = ({ name }) => (
   <IconWrapper name={name} />
 )
 
-export default Icon;
+export default Icon
 
 // styles
 
@@ -38,4 +38,4 @@ export const IconWrapper = styled.i`
     font-family: Icons;
     font-style: normal;
   }
-`;
+`

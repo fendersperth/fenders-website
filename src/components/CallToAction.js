@@ -1,7 +1,7 @@
-import React from 'react';
-import styled from 'react-emotion';
-import Icon, { IconWrapper } from './Icon';
-import { BREAKPOINTS } from '../constants';
+import React from 'react'
+import styled from 'react-emotion'
+import Icon, { IconWrapper } from './Icon'
+import { BREAKPOINTS } from '../constants'
 
 const CallToAction = ({ children }) => (
   <CTAWrapper>
@@ -10,7 +10,7 @@ const CallToAction = ({ children }) => (
   </CTAWrapper>
 )
 
-export default CallToAction;
+export default CallToAction
 
 const CTAWrapper = styled.div`
   align-items: center;
@@ -21,7 +21,7 @@ const CTAWrapper = styled.div`
     font-size: 8px;
     margin-top: 20px;
   }
-`;
+`
 
 const Text = styled.h3`
   position: relative;
@@ -33,4 +33,4 @@ const Text = styled.h3`
   @media (min-width: ${BREAKPOINTS.MEDIUM}) {
     font-size: 2.6rem;
   }
-`;
+`

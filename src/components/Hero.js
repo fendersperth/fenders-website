@@ -1,6 +1,6 @@
 import React from 'react'
-import styled from 'react-emotion';
-import { BREAKPOINTS, COLOURS } from '../constants';
+import styled from 'react-emotion'
+import { BREAKPOINTS, COLOURS } from '../constants'
 
 const Hero = () => (
     <HeroWrapper>
@@ -26,7 +26,7 @@ const HeroWrapper = styled.div`
     @media (min-width: ${BREAKPOINTS.LARGE}) {
         height: 50vh;
     }
-`;
+`
 
 const HeroText = styled.h2`
     font-weight: 600;
@@ -48,7 +48,7 @@ const HeroText = styled.h2`
     @media (min-width: ${BREAKPOINTS.LARGE}) {
         font-size: 5.5rem;
     }
-`;
+`
 
 const Block = styled.span`
     display: inline-block;
@@ -58,4 +58,4 @@ const Block = styled.span`
     color: ${COLOURS.RED};
     font-style: normal;
     padding: 0 10px;
-`;
+`

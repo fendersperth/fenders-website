@@ -1,8 +1,8 @@
 import React from 'react'
-import styled from 'react-emotion';
+import styled from 'react-emotion'
 import { StaticQuery, graphql } from 'gatsby'
-import EventCard, { EventCardWrapper, EventCardLink } from './EventCard'
-import { BREAKPOINTS } from '../constants';
+import EventCard, { EventCardLink } from './EventCard'
+import { BREAKPOINTS } from '../constants'
 
 const determineType = name => {
     name = name.toLowerCase()
@@ -77,7 +77,7 @@ const EventsWrapper = styled.section`
     @media (min-width: ${BREAKPOINTS.SMALL}) {
         margin: 55px 0;
     }
-`;
+`
 
 const Content = styled.div`
     label: events-content;
@@ -109,4 +109,4 @@ const Content = styled.div`
     @media (min-width: ${BREAKPOINTS.MEDIUM}) {
         max-width: 660px;
     }
-`;
+`

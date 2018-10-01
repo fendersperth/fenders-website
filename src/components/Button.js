@@ -1,12 +1,12 @@
-import React from 'react';
-import styled from 'react-emotion';
-import { COLOURS } from '../constants';
+import React from 'react'
+import styled from 'react-emotion'
+import { COLOURS } from '../constants'
 
 const Button = ({ colour = 'purple', title, href, children }) => (
-  <LinkButton href={href} title={title}>{children}</LinkButton>
+  <LinkButton href={href} title={title} colour={colour}>{children}</LinkButton>
 )
 
-export default Button;
+export default Button
 
 const BUTTON_COLOURS = {
   solid: {
@@ -19,15 +19,15 @@ const BUTTON_COLOURS = {
   outlined: {
     purple: { default: COLOURS.PURPLE_PRIMARY, active: COLOURS.PURPLE_PRIMARY },
   },
-};
-
-const getButtonProp = (style = 'solid') => ({ colour = 'purple', prop = 'default' }) => {
-  return BUTTON_COLOURS[style][colour][prop];
 }
 
-const getSolidButtonProp = getButtonProp('solid');
-const getNakedButtonProp = getButtonProp('naked');
-const getOutlinedButtonProp = getButtonProp('outlined');
+const getButtonProp = (style = 'solid') => ({ colour = 'purple', prop = 'default' }) => {
+  return BUTTON_COLOURS[style][colour][prop]
+}
+
+const getSolidButtonProp = getButtonProp('solid')
+const getNakedButtonProp = getButtonProp('naked')
+const getOutlinedButtonProp = getButtonProp('outlined')
 
 const LinkButton = styled.a`
     background-color: ${p => getSolidButtonProp({ colour: p.colour, prop: 'default' })};
@@ -51,7 +51,7 @@ const LinkButton = styled.a`
     background-color: grey;
     opacity: 0.5;
   }
-`;
+`
 
 export const NakedButton = styled(LinkButton)`
   background-color: transparent;

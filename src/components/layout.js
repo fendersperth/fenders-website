@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import styled from 'react-emotion'
 import { StaticQuery, graphql, withPrefix } from 'gatsby'
-import { COLOURS } from '../constants';
+import { COLOURS } from '../constants'
 
 import Header from '../components/Header'
 import appleTouch from '../assets/img/apple-touch-icon.png'
@@ -13,7 +13,7 @@ import maskIcon from '../assets/img/safari-pinned-tab.svg'
 
 import '../assets/css/fenders-styles.css'
 
-const Layout = ({ children, data }) => (
+const Layout = ({ children }) => (
     <StaticQuery
         query={graphql`
             query SiteTitleQuery {
@@ -71,7 +71,7 @@ Layout.propTypes = {
 export default Layout
 
 const PageContainer = styled.div`
-`;
+`
 
 const Wrapper = styled.div`
     max-width: 1800px;
@@ -79,4 +79,4 @@ const Wrapper = styled.div`
     width: 100%;
     position: relative;
     background: ${COLOURS.PURPLE_BG};
-`;
+`
