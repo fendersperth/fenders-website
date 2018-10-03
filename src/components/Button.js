@@ -21,6 +21,11 @@ const BUTTON_COLOURS = {
   },
 }
 
+const BUTTON_PADDING = {
+  DEFAULT: '13px 30px',
+  SMALL: '10px 15px'
+}
+
 const getButtonProp = (style = 'solid') => ({ colour = 'purple', prop = 'default' }) => {
   return BUTTON_COLOURS[style][colour][prop]
 }
@@ -31,7 +36,7 @@ const getOutlinedButtonProp = getButtonProp('outlined')
 
 const LinkButton = styled.a`
     background-color: ${p => getSolidButtonProp({ colour: p.colour, prop: 'default' })};
-    padding: 13px 30px;
+    padding: ${BUTTON_PADDING.DEFAULT};
     color: white;
     text-decoration: none;
     display: inline-block;
@@ -55,7 +60,7 @@ const LinkButton = styled.a`
 
 export const NakedButton = styled(LinkButton)`
   background-color: transparent;
-  padding: 10px 15px;
+  padding: ${BUTTON_PADDING.SMALL};
 
   :hover,
   :focus {
@@ -68,7 +73,7 @@ export const OutlinedButton = styled(LinkButton)`
   border-style: solid;
   border-color: ${getOutlinedButtonProp({ colour: 'purple', prop: 'default' })};
   background-color: transparent;
-  padding: 10px 15px;
+  padding: ${BUTTON_PADDING.SMALL};
 
   :hover,
   :focus {
