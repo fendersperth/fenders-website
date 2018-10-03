@@ -92,9 +92,8 @@ const Month = styled.div`
     top: -30px;
     left: 0;
     color: #fff;
-    font-weight: 600;
-    font-size: 13px;
-    font-size: 1.3rem;
+    font-weight: 700;
+    font-size: 1.35rem;
 
     @media (min-width: ${BREAKPOINTS.SMALL}) {
         display: block;
@@ -124,6 +123,5 @@ const EventDate = styled.div`
     position: absolute;
     bottom: 10px;
     opacity: 0.7;
-    font-size: 13px;
     font-size: 1.3rem;
 `

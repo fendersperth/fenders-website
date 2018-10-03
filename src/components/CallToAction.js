@@ -27,8 +27,9 @@ const Text = styled.h3`
   position: relative;
   text-align: center;
   color: #fff;
-  font-weight: 600;
+  font-weight: 700;
   font-size: 1.8rem;
+  letter-spacing: -0.2px;
 
   @media (min-width: ${BREAKPOINTS.MEDIUM}) {
     font-size: 2.6rem;
