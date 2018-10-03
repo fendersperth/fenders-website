@@ -69,8 +69,8 @@ const EventCardWrapper = styled.article`
 	transition: background 0.4s ease-in-out;
 
     
-    &:hover,
-    &:focus {
+    :hover,
+    :focus {
         border-color: ${p => p.isActive ? '#fff' : COLOURS.PURPLE_MEDIUM};
         background: ${p => p.isActive ? '#fff' : '#866fae'};
     }
