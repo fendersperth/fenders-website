@@ -1,9 +1,11 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
+import styled from 'react-emotion'
 import { StaticQuery, graphql, withPrefix } from 'gatsby'
+import { COLOURS } from '../constants'
 
-import { Header } from '../components/Header'
+import Header from '../components/Header'
 import appleTouch from '../assets/img/apple-touch-icon.png'
 import fav32 from '../assets/img/favicon-32x32.png'
 import fav16 from '../assets/img/favicon-16x16.png'
@@ -11,7 +13,7 @@ import maskIcon from '../assets/img/safari-pinned-tab.svg'
 
 import '../assets/css/fenders-styles.css'
 
-const Layout = ({ children, data }) => (
+const Layout = ({ children }) => (
     <StaticQuery
         query={graphql`
             query SiteTitleQuery {
@@ -51,12 +53,12 @@ const Layout = ({ children, data }) => (
                         rel="stylesheet"
                     />
                 </Helmet>
-                <div className="page-container">
-                    <div className="outer-container">
+                <PageContainer>
+                    <Wrapper>
                         <Header siteTitle={data.site.siteMetadata.title} />
                         {children}
-                    </div>
-                </div>
+                    </Wrapper>
+                </PageContainer>
             </>
         )}
     />
@@ -67,3 +69,14 @@ Layout.propTypes = {
 }
 
 export default Layout
+
+const PageContainer = styled.div`
+`
+
+const Wrapper = styled.div`
+    max-width: 1800px;
+    margin: 0 auto;
+    width: 100%;
+    position: relative;
+    background: ${COLOURS.PURPLE_BG};
+`
