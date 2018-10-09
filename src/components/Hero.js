@@ -29,8 +29,10 @@ const HeroWrapper = styled.div`
 `
 
 const HeroText = styled.h2`
-    font-weight: 600;
+    font-weight: 700;
     font-size: 2.2rem;
+    letter-spacing: -0.25px;
+    line-height: 1.2;
     position: absolute;
     left: 50%;
     top: 50%;

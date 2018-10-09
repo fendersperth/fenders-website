@@ -49,7 +49,7 @@ const Layout = ({ children }) => (
                     <link rel="mask-icon" href={maskIcon} color="#614b87" />
                     <meta name="theme-color" content="#614b87" />
                     <link
-                        href="https://fonts.googleapis.com/css?family=Varela+Round"
+                        href="https://fonts.googleapis.com/css?family=Nunito:400,700"
                         rel="stylesheet"
                     />
                 </Helmet>
