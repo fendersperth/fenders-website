@@ -1,6 +1,7 @@
 import React from 'react'
 
-import Layout from '../components/layout'
+import '../assets/css/fenders-styles.css'
+import Layout from '../components/Layout'
 import Hero from '../components/Hero'
 import CallToAction from '../components/CallToAction'
 import Footer from '../components/Footer'

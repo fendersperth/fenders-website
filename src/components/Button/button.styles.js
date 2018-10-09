@@ -1,12 +1,5 @@
-import React from 'react'
 import styled from 'react-emotion'
-import { COLOURS } from '../constants'
-
-const Button = ({ colour = 'purple', title, href, children }) => (
-  <LinkButton href={href} title={title} colour={colour}>{children}</LinkButton>
-)
-
-export default Button
+import { COLOURS } from '../../constants'
 
 const BUTTON_COLOURS = {
   solid: {
@@ -34,7 +27,7 @@ const getSolidButtonProp = getButtonProp('solid')
 const getNakedButtonProp = getButtonProp('naked')
 const getOutlinedButtonProp = getButtonProp('outlined')
 
-const LinkButton = styled.a`
+export const LinkButton = styled.a`
     background-color: ${p => getSolidButtonProp({ colour: p.colour, prop: 'default' })};
     padding: ${BUTTON_PADDING.DEFAULT};
     color: white;

@@ -1,8 +1,5 @@
 import React from 'react'
-import styled from 'react-emotion'
-import LogoImage from '../assets/img/logo.svg'
-import { NakedButton, OutlinedButton } from './Button'
-import { BREAKPOINTS } from '../constants'
+import { HeaderWrapper, Logo, LogoLink, Nav, LoginButton, JoinButton } from './header.styles'
 
 const Header = ({ siteTitle }) => (
     <HeaderWrapper role="banner">
@@ -35,59 +32,3 @@ const Header = ({ siteTitle }) => (
 )
 
 export default Header
-
-const JoinButton = styled(OutlinedButton)`
-    margin-left: 20px;
-
-    span {
-        display: none;
-    
-        @media (min-width: ${BREAKPOINTS.SMALL}) {
-            display: inline;
-        }
-    }
-`
-
-const LoginButton = styled(NakedButton)``
-
-const HeaderWrapper = styled.header`
-    display: flex;
-    padding: 24px 35px;
-
-    @media (min-width: ${BREAKPOINTS.MEDIUM}) {
-        height: 160px;
-    }
-`
-
-const Logo = styled.h1`
-    flex: 1;
-`
-
-const LogoLink = styled.a`
-    align-items: center;
-    background-image: url(${ LogoImage});
-    display: flex;
-    font-size: 9.6px;
-    height: 3.625em;
-    width: 12.5em;
-
-    @media (min-width: ${BREAKPOINTS.SMALL}) {
-        font-size: 12px;
-    }
-
-    @media (min-width: ${BREAKPOINTS.MEDIUM}) {
-        position: absolute;
-        left: 50%;
-        transform: translate(-50%);
-        font-size: 16px;
-        top: 80px;
-    }
-`
-
-const Nav = styled.nav`
-    float: right;
-
-    li {
-        display: inline;
-    }
-`
