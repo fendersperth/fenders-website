@@ -1,20 +1,7 @@
-import React from 'react'
 import styled from 'react-emotion'
-import { BREAKPOINTS, COLOURS } from '../constants'
+import { BREAKPOINTS, COLOURS } from '../../constants'
 
-const Hero = () => (
-    <HeroWrapper>
-        <HeroText>
-            Front End Developers &amp; Designers with <Block>.class</Block>
-        </HeroText>
-    </HeroWrapper>
-)
-
-export default Hero
-
-// styles
-
-const HeroWrapper = styled.div`
+export const HeroWrapper = styled.div`
     position: relative;
     height: 20vh;
     min-height: 200px;
@@ -28,7 +15,7 @@ const HeroWrapper = styled.div`
     }
 `
 
-const HeroText = styled.h2`
+export const HeroText = styled.h2`
     font-weight: 700;
     font-size: 2.2rem;
     letter-spacing: -0.25px;
@@ -52,7 +39,7 @@ const HeroText = styled.h2`
     }
 `
 
-const Block = styled.span`
+export const Block = styled.span`
     display: inline-block;
     border-radius: 5px;
     border: 3px solid ${COLOURS.GREY};
