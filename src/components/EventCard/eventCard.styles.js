@@ -1,47 +1,10 @@
-import React from 'react'
 import styled from 'react-emotion'
-import PropTypes from 'prop-types'
-import { BREAKPOINTS, COLOURS } from '../constants'
-import Icon, { IconWrapper } from './Icon'
-
-const EventCard = ({ active = false, month, url, title, date, type }) => {
-    const cardContent = (
-        <>
-            <EventTag>
-                <Icon name={`${type.toLowerCase()}`} />
-                {type}
-            </EventTag>
-            <EventTitle>{title}</EventTitle>
-            <EventDate>{date || 'TBA'}</EventDate>
-        </>
-    )
-
-    return (
-        <EventCardLink href={url}>
-            <EventCardWrapper isActive={active}>
-                {month && <Month>{month}</Month>}
-                {cardContent}
-            </EventCardWrapper>
-        </EventCardLink>
-    )
-}
-
-EventCard.propTypes = {
-    type: PropTypes.oneOf(['social', 'workshop', 'talk']).isRequired,
-    title: PropTypes.string.isRequired,
-    date: PropTypes.string,
-    url: PropTypes.string,
-    active: PropTypes.bool,
-    month: PropTypes.string,
-}
-
-export default EventCard
-
-// styles
+import { BREAKPOINTS, COLOURS } from '../../constants'
+import { IconWrapper } from '../Icon'
 
 export const EventCardLink = styled.a``
 
-const EventCardWrapper = styled.article`
+export const EventCardWrapper = styled.article`
     label: event-card-wrapper;
     color: ${p => {
         if (p.isActive) return '#000'
@@ -84,7 +47,7 @@ const EventCardWrapper = styled.article`
     }
 `
 
-const Month = styled.div`
+export const Month = styled.div`
     label: month-label;
     position: absolute;
     display: none;
@@ -100,7 +63,7 @@ const Month = styled.div`
     }
 `
 
-const EventTag = styled.div`
+export const EventTag = styled.div`
     label: event-tag;
     position: relative;
     font-weight: 700;
@@ -113,13 +76,13 @@ const EventTag = styled.div`
     }
 `
 
-const EventTitle = styled.div`
+export const EventTitle = styled.div`
     font-weight: 700;
     margin-top: 15px;
     line-height: 1.2;
 `
 
-const EventDate = styled.div`
+export const EventDate = styled.div`
     position: absolute;
     bottom: 10px;
     opacity: 0.7;

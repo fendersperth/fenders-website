@@ -1,18 +1,8 @@
-import React from 'react'
 import styled from 'react-emotion'
-import Icon, { IconWrapper } from './Icon'
-import { BREAKPOINTS } from '../constants'
+import { IconWrapper } from '../Icon'
+import { BREAKPOINTS } from '../../constants'
 
-const CallToAction = ({ children }) => (
-  <CTAWrapper>
-    <Text>{children}</Text>
-    <Icon name="arrow" />
-  </CTAWrapper>
-)
-
-export default CallToAction
-
-const CTAWrapper = styled.div`
+export const CTAWrapper = styled.div`
   align-items: center;
   display: flex;
   flex-direction: column;
@@ -23,7 +13,7 @@ const CTAWrapper = styled.div`
   }
 `
 
-const Text = styled.h3`
+export const Text = styled.h3`
   position: relative;
   text-align: center;
   color: #fff;
