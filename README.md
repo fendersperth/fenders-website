@@ -2,7 +2,7 @@
 - The Fenders Perth Meetup website.
 
 ## TODO
-- [ ] Convert CSS to Emotion or Styled Components
+Check issues for current items or create an issue if you have anything in mind.
 
 ## Meetup events
 Events are pulled from the Meetup API using this endpoint:
