@@ -10,7 +10,6 @@
     "lint": "eslint src/"
   },
   "dependencies": {
-    "axios": "^0.17.1",
     "babel-plugin-transform-runtime": "^6.23.0",
     "d.js": "^0.7.5",
     "emotion": "^9.2.12",
