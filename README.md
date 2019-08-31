@@ -13,12 +13,7 @@ Check issues for current items or create an issue if you have anything in mind.
 Events are pulled from the Meetup API using this endpoint:
 https://www.meetup.com/meetup_api/docs/:urlname/events/#list
 
-### Required
-
-:urlname = Front-End-Web-Developers-Perth
-
-This means supplying an env variable `MEETUP_API` in dev and prod.
-Meetup API Key: https://secure.meetup.com/meetup_api/key/
+`:urlname`: Front-End-Web-Developers-Perth
 
 ## Running in development
 
