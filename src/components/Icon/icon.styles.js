@@ -1,4 +1,3 @@
-import React from 'react'
 import styled from 'react-emotion'
 
 // issue with escaped string sequences in js
@@ -15,14 +14,6 @@ const getIconProp = (name, prop) => {
   const icon = Icons.find(x => x.name === name)
   if (icon != null && icon.hasOwnProperty(prop)) return icon[prop]
 }
-
-const Icon = ({ name }) => (
-  <IconWrapper name={name} />
-)
-
-export default Icon
-
-// styles
 
 export const IconWrapper = styled.i`
   label: icon;
