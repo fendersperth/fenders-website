@@ -12,7 +12,7 @@ import {
 const Footer = () => (
     <FooterWrapper role="contentinfo">
         <Container>
-            <FooterLogo className="logo" href="" title="Fenders">
+            <FooterLogo className="logo" href="/" title="Fenders">
                 <span className="u-vis-hide">Fenders</span>
             </FooterLogo>
 
