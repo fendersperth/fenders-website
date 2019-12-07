@@ -1,5 +1,13 @@
 import React from 'react'
-import { FooterWrapper, Container, FooterLogo, FooterNav, SocialNav, TwitterLink, SlackLink } from './footer.styles'
+import {
+    FooterWrapper,
+    Container,
+    FooterLogo,
+    FooterNav,
+    SocialNav,
+    TwitterLink,
+    SlackLink,
+} from './footer.styles'
 
 const Footer = () => (
     <FooterWrapper role="contentinfo">
@@ -32,6 +40,11 @@ const Footer = () => (
                             title="Email us"
                         >
                             Email us
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/code-of-conduct" title="Code of conduct">
+                            Code of conduct
                         </a>
                     </li>
                 </ul>
