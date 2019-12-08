@@ -12,12 +12,12 @@ export default () => (
                 Fenders is a local community group for front end developers. Our
                 goal is to create a supportive and collaborative web community
                 where we can discuss and share our favourite front end topics!
-                At Fenders we don’t care what tech you use, what your age,
-                gender or religion is, Fenders is for everyone and we welcome
-                and support anyone wanting to be a part of our community.
+                At Fenders we don't care what tech you use, how old you are or
+                what your gender or religion is. Fenders is for everyone and we
+                welcome and support anyone wanting to be part of our community.
             </p>
             <p>
-                At Fenders we aim to provides a welcoming and harassment-free
+                At Fenders we aim to provide a welcoming and harassment-free
                 environment for everyone regardless of:
             </p>
             <ul>
@@ -134,7 +134,7 @@ export default () => (
                     <a href="https://www.meetup.com/front-end-web-developers-perth/">
                         www.meetup.com/front-end-web-developers-perth/
                     </a>
-                    ),
+                    )
                 </li>
                 <li>
                     Twitter Direct Message (
@@ -148,7 +148,7 @@ export default () => (
             <hr />
             <p>
                 This Code of Conduct was based on resources provided by Karolina
-                Szczur:{' '}
+                Szczur:
                 <a href="https://medium.com/@fox/when-a-code-of-conduct-becomes-harmful-1d4e737ff7aa">
                     https://medium.com/@fox/when-a-code-of-conduct-becomes-harmful-1d4e737ff7aa
                 </a>
