@@ -1,38 +1,40 @@
 import React from 'react'
-import { FooterWrapper, Container, FooterLogo, FooterNav, SocialNav, TwitterLink, SlackLink } from './footer.styles'
+import {
+    FooterWrapper,
+    Container,
+    FooterLogo,
+    FooterNav,
+    SocialNav,
+    TwitterLink,
+    SlackLink,
+} from './footer.styles'
 
 const Footer = () => (
     <FooterWrapper role="contentinfo">
         <Container>
-            <FooterLogo className="logo" href="" title="Fenders">
+            <FooterLogo className="logo" href="/" title="Fenders">
                 <span className="u-vis-hide">Fenders</span>
             </FooterLogo>
 
             <FooterNav>
                 <ul>
                     <li>
-                        <a
-                            href="https://docs.google.com/forms/d/e/1FAIpQLScb2iYr65ZXUEDVkKP3uhbItojPKzHTOaBckjKUWrQoNLqSaA/viewform"
-                            title="Submit a talk"
-                        >
+                        <a href="https://docs.google.com/forms/d/e/1FAIpQLScb2iYr65ZXUEDVkKP3uhbItojPKzHTOaBckjKUWrQoNLqSaA/viewform">
                             Submit a talk
                         </a>
                     </li>
                     <li>
-                        <a
-                            href="mailto:fendersperth@gmail.com?Subject=Sponsorship"
-                            title="Sponsorship"
-                        >
+                        <a href="mailto:fendersperth@gmail.com?Subject=Sponsorship">
                             Sponsorship
                         </a>
                     </li>
                     <li>
-                        <a
-                            href="mailto:fendersperth@gmail.com?Subject=Enquiry"
-                            title="Email us"
-                        >
+                        <a href="mailto:fendersperth@gmail.com?Subject=Enquiry">
                             Email us
                         </a>
+                    </li>
+                    <li>
+                        <a href="/code-of-conduct">Code of conduct</a>
                     </li>
                 </ul>
             </FooterNav>

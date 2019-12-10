@@ -151,6 +151,8 @@ figure {
 hr {
     box-sizing: content-box;
     height: 0;
+    color: #7f65ae;
+    margin: 20px 0;
 }
 
 /**
@@ -471,4 +473,15 @@ body {
     font-weight: 400;
     line-height: 1.5;
     color: #27282d;
+}
+
+main {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 20px;
+    color: #fff;
+}
+main a:hover,
+main a:focus {
+    text-decoration: underline;
 }
