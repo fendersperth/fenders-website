@@ -11,9 +11,9 @@ module.exports = {
             },
         },
         {
-            resolve: 'gatsby-source-meetup',
+            resolve: 'gatsby-source-meetup-events',
             options: {
-                apiURL: `https://api.meetup.com/Front-End-Web-Developers-Perth/events`,
+                groupId: `Front-End-Web-Developers-Perth`,
             },
         },
     ],

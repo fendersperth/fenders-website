@@ -17,6 +17,7 @@
     "gatsby": "2.18.13",
     "gatsby-plugin-emotion": "^2.0.5",
     "gatsby-plugin-react-helmet": "3.1.18",
+    "gatsby-source-meetup-events": "^1.0.2",
     "prop-types": "^15.7.2",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
