@@ -10,18 +10,17 @@
     "lint": "eslint src/"
   },
   "dependencies": {
+    "@emotion/core": "^10.0.28",
+    "@emotion/styled": "^10.0.27",
     "babel-plugin-transform-runtime": "^6.23.0",
-    "emotion": "^9.2.12",
-    "emotion-server": "^9.2.12",
-    "eslint-plugin-react": "^7.11.1",
-    "gatsby": "2.18.13",
-    "gatsby-plugin-emotion": "^2.0.5",
-    "gatsby-plugin-react-helmet": "3.1.18",
+    "eslint-plugin-react": "^7.19.0",
+    "gatsby": "2.20.13",
+    "gatsby-plugin-emotion": "^4.2.1",
+    "gatsby-plugin-react-helmet": "3.2.1",
     "gatsby-source-meetup-events": "^1.0.2",
     "prop-types": "^15.7.2",
-    "react": "^16.12.0",
-    "react-dom": "^16.12.0",
-    "react-emotion": "^9.2.12",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
     "react-helmet": "^5.2.1"
   }
 }

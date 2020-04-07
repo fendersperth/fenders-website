@@ -1,4 +1,4 @@
-import styled from 'react-emotion'
+import styled from '@emotion/styled'
 import { COLOURS } from '../../constants'
 
 export const PageContainer = styled.div`

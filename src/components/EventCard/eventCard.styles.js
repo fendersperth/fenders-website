@@ -1,4 +1,4 @@
-import styled from 'react-emotion'
+import styled from '@emotion/styled'
 import { BREAKPOINTS, COLOURS } from '../../constants'
 import { IconWrapper } from '../Icon'
 
@@ -31,7 +31,7 @@ export const EventCardWrapper = styled.article`
     min-height: 160px;
 	transition: background 0.4s ease-in-out;
 
-    
+
     :hover,
     :focus {
         border-color: ${p => p.isActive ? '#fff' : COLOURS.PURPLE_MEDIUM};

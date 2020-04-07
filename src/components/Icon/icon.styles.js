@@ -1,4 +1,4 @@
-import styled from 'react-emotion'
+import styled from '@emotion/styled'
 
 // issue with escaped string sequences in js
 // https://github.com/styled-components/styled-components/issues/1285

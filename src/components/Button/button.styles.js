@@ -1,4 +1,4 @@
-import styled from 'react-emotion'
+import styled from '@emotion/styled'
 import { COLOURS } from '../../constants'
 
 const BUTTON_COLOURS = {
@@ -70,6 +70,6 @@ export const OutlinedButton = styled(LinkButton)`
 
   :hover,
   :focus {
-    background-color: ${getOutlinedButtonProp({ colour: 'purple', prop: 'active' })}; 
+    background-color: ${getOutlinedButtonProp({ colour: 'purple', prop: 'active' })};
   }
 `
