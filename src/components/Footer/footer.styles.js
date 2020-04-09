@@ -1,4 +1,4 @@
-import styled from 'react-emotion'
+import styled from '@emotion/styled'
 import { BREAKPOINTS } from '../../constants'
 import MonoLogo from '../../assets/img/logo-mono.svg'
 import SlackLogo from '../../assets/img/slack.svg'

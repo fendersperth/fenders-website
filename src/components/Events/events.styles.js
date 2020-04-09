@@ -1,4 +1,4 @@
-import styled from 'react-emotion'
+import styled from '@emotion/styled'
 import { EventCardLink } from '../EventCard'
 import { BREAKPOINTS } from '../../constants'
 
@@ -24,7 +24,7 @@ export const Content = styled.div`
     ${EventCardLink} {
         margin: 0 0 20px;
         flex: 1;
-        
+
         @media (min-width: ${BREAKPOINTS.SMALL}) {
             flex: 0 0 200px;
             margin: 0 10px 50px;

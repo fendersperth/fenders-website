@@ -1,4 +1,4 @@
-import styled from 'react-emotion'
+import styled from '@emotion/styled'
 import LogoImage from '../../assets/img/logo.svg'
 import { NakedButton, OutlinedButton } from '../Button'
 import { BREAKPOINTS } from '../../constants'
@@ -8,7 +8,7 @@ export const JoinButton = styled(OutlinedButton)`
 
     span {
         display: none;
-    
+
         @media (min-width: ${BREAKPOINTS.SMALL}) {
             display: inline;
         }
